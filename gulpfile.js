@@ -1,7 +1,8 @@
-const { src, dest, watch, series } = require("gulp");
+const { src, dest, watch, series, parallel } = require("gulp");
 const nunjucksRender = require("gulp-nunjucks-render");
 const htmlmin = require("gulp-htmlmin");
 
+// Compile Nunjucks → dist
 function views() {
   console.log("Compiling Nunjucks…");
   return src("src/pages/**/*.njk")
@@ -16,15 +17,24 @@ function views() {
     .pipe(
       htmlmin({
         collapseWhitespace: false,
-        removeComments: false, // keep our debug comments
+        removeComments: false,
       })
     )
     .pipe(dest("dist"));
 }
 
-function watcher() {
-  watch("src/**/*.njk", views);
+// Copy /assets → dist/assets
+function assets() {
+  return src("assets/**/*")
+    .pipe(dest("dist/assets"));
 }
 
-exports.default = series(views, watcher);
-exports.build = views;
+// Watch
+function watcher() {
+  watch("src/**/*.njk", views);
+  watch("src/assets/**/*", assets);
+}
+
+// Commands
+exports.default = series(parallel(views, assets), watcher);
+exports.build = series(parallel(views, assets));
