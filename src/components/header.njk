@@ -30,10 +30,10 @@
   <div class="container">
     <div class="flex justify-between items-center h-20 lg:h-[8.1vw] 3xl:h-[156px]">
       <a href="/">
-        <img class="w-[180px] 2xl:w-[13vw] 3xl:w-[261px]" width="261" height="37" src="../../assets/images/svg/logo.svg" alt="logo" />
+        <img class="w-[180px] 2xl:w-[13vw] 3xl:w-[261px]" width="261" height="37" src="./assets/images/svg/logo.svg" alt="logo" />
       </a>
       <nav class="hidden xl:flex items-center text-[17px] 3xl:text-xl gap-8 2xl:gap-11 3xl:gap-14">
-        <a @click.prevent="showMegaMenu = !showMegaMenu; showSearch = false" class="flex items-center gap-3" href="#">Our Offerings <img class="duration-500" :class="showMegaMenu ? '-scale-y-100' : 'scale-y-100'" src="../../assets/images/svg/arrow-down.svg" alt="icon"></a>
+        <a @click.prevent="showMegaMenu = !showMegaMenu; showSearch = false" class="flex items-center gap-3" href="#">Our Offerings <img class="duration-500" :class="showMegaMenu ? '-scale-y-100' : 'scale-y-100'" src="./assets/images/svg/arrow-down.svg" alt="icon"></a>
         <a href="#">Our Projects</a>
         <a href="#">About Us</a>
         <a href="#">Sustainability</a>
@@ -43,10 +43,10 @@
       <div class="flex items-center gap-4">
         <button @click="showSearch = !showSearch; showMegaMenu = false; showMobileMenu = false;" type="button" class="flex items-center gap-5 3xl:gap-6 text-[17px] cursor-pointer">
           <span class="hidden md:block">Search</span>
-          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="../../assets/images/svg/search.svg" alt="search" />
+          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="./assets/images/svg/search.svg" alt="search" />
         </button>
         <button @click="showMobileMenu = !showMobileMenu; showSearch = false;" type="button" class="flex xl:hidden items-center gap-5 3xl:gap-6 text-[17px] cursor-pointer">
-          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="../../assets/images/svg/menu.svg" alt="menu" />
+          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="./assets/images/svg/menu.svg" alt="menu" />
         </button>
       </div>
     </div>
@@ -59,7 +59,7 @@
         <div class="grid grid-cols-[314fr_372fr_314fr] py-12 3xl:py-14">
           <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 border-r border-r-dark-blue pr-12 2xl:pr-16 3xl:pr-20">
             <div>
-              <img src="../../assets/images/svg/embedded-networks-dark.svg" alt="icon">
+              <img src="./assets/images/svg/embedded-networks-dark.svg" alt="icon">
             </div>
             <h4>Embedded Networks</h4>
             <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
@@ -67,7 +67,7 @@
           </div>
           <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 border-r border-r-dark-blue px-12 2xl:px-16 3xl:px-20">
             <div>
-              <img src="../../assets/images/svg/power-purchase-agreements-dark.svg" alt="icon">
+              <img src="./assets/images/svg/power-purchase-agreements-dark.svg" alt="icon">
             </div>
             <h4>Power Purchase Agreements</h4>
             <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
@@ -75,7 +75,7 @@
           </div>
           <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 pl-12 2xl:pl-16 3xl:pl-20">
             <div>
-              <img src="../../assets/images/svg/community-energy-networks-dark.svg" alt="icon">
+              <img src="./assets/images/svg/community-energy-networks-dark.svg" alt="icon">
             </div>
             <h4>Community Energy Networks</h4>
             <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
@@ -92,7 +92,7 @@
         <div class="flex items-center h-18 lg:h-[7vw] 3xl:h-[135px] gap-10">
           <input type="search" placeholder="Start searching" class="placeholder:text-white text-white h-full flex-1 focus:outline-none" />
           <button @click="showSearch = false" type="button" class="cursor-pointer py-1">
-            <img class="w-6  3xl:w-[31px]" src="../../assets/images/svg/close-search.svg" alt="close"/>
+            <img class="w-6  3xl:w-[31px]" src="./assets/images/svg/close-search.svg" alt="close"/>
           </button>
         </div>
       </div>

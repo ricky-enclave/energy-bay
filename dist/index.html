@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="assets/images/svg/favicon.svg">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
   </head>
   <body class="font-sans antialiased bg-light text-dark-blue">
     
@@ -40,10 +40,10 @@
   <div class="container">
     <div class="flex justify-between items-center h-20 lg:h-[8.1vw] 3xl:h-[156px]">
       <a href="/">
-        <img class="w-[180px] 2xl:w-[13vw] 3xl:w-[261px]" width="261" height="37" src="../../assets/images/svg/logo.svg" alt="logo">
+        <img class="w-[180px] 2xl:w-[13vw] 3xl:w-[261px]" width="261" height="37" src="./assets/images/svg/logo.svg" alt="logo">
       </a>
       <nav class="hidden xl:flex items-center text-[17px] 3xl:text-xl gap-8 2xl:gap-11 3xl:gap-14">
-        <a @click.prevent="showMegaMenu = !showMegaMenu; showSearch = false" class="flex items-center gap-3" href="#">Our Offerings <img class="duration-500" :class="showMegaMenu ? '-scale-y-100' : 'scale-y-100'" src="../../assets/images/svg/arrow-down.svg" alt="icon"></a>
+        <a @click.prevent="showMegaMenu = !showMegaMenu; showSearch = false" class="flex items-center gap-3" href="#">Our Offerings <img class="duration-500" :class="showMegaMenu ? '-scale-y-100' : 'scale-y-100'" src="./assets/images/svg/arrow-down.svg" alt="icon"></a>
         <a href="#">Our Projects</a>
         <a href="#">About Us</a>
         <a href="#">Sustainability</a>
@@ -53,10 +53,10 @@
       <div class="flex items-center gap-4">
         <button @click="showSearch = !showSearch; showMegaMenu = false; showMobileMenu = false;" type="button" class="flex items-center gap-5 3xl:gap-6 text-[17px] cursor-pointer">
           <span class="hidden md:block">Search</span>
-          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="../../assets/images/svg/search.svg" alt="search">
+          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="./assets/images/svg/search.svg" alt="search">
         </button>
         <button @click="showMobileMenu = !showMobileMenu; showSearch = false;" type="button" class="flex xl:hidden items-center gap-5 3xl:gap-6 text-[17px] cursor-pointer">
-          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="../../assets/images/svg/menu.svg" alt="menu">
+          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="./assets/images/svg/menu.svg" alt="menu">
         </button>
       </div>
     </div>
@@ -69,7 +69,7 @@
         <div class="grid grid-cols-[314fr_372fr_314fr] py-12 3xl:py-14">
           <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 border-r border-r-dark-blue pr-12 2xl:pr-16 3xl:pr-20">
             <div>
-              <img src="../../assets/images/svg/embedded-networks-dark.svg" alt="icon">
+              <img src="./assets/images/svg/embedded-networks-dark.svg" alt="icon">
             </div>
             <h4>Embedded Networks</h4>
             <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
@@ -93,7 +93,7 @@
           </div>
           <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 border-r border-r-dark-blue px-12 2xl:px-16 3xl:px-20">
             <div>
-              <img src="../../assets/images/svg/power-purchase-agreements-dark.svg" alt="icon">
+              <img src="./assets/images/svg/power-purchase-agreements-dark.svg" alt="icon">
             </div>
             <h4>Power Purchase Agreements</h4>
             <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
@@ -117,7 +117,7 @@
           </div>
           <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 pl-12 2xl:pl-16 3xl:pl-20">
             <div>
-              <img src="../../assets/images/svg/community-energy-networks-dark.svg" alt="icon">
+              <img src="./assets/images/svg/community-energy-networks-dark.svg" alt="icon">
             </div>
             <h4>Community Energy Networks</h4>
             <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
@@ -150,7 +150,7 @@
         <div class="flex items-center h-18 lg:h-[7vw] 3xl:h-[135px] gap-10">
           <input type="search" placeholder="Start searching" class="placeholder:text-white text-white h-full flex-1 focus:outline-none">
           <button @click="showSearch = false" type="button" class="cursor-pointer py-1">
-            <img class="w-6 3xl:w-[31px]" src="../../assets/images/svg/close-search.svg" alt="close">
+            <img class="w-6 3xl:w-[31px]" src="./assets/images/svg/close-search.svg" alt="close">
           </button>
         </div>
       </div>
@@ -185,12 +185,12 @@
 <section class="pt-0 pb-0 bg-dark-blue text-light">
   <!-- BG image -->
   <div class="w-full h-64 md:h-80 lg:h-[35vw] 3xl:h-[674px] overflow-hidden -z-10 -mb-20 md:-mb-32 lg:mb-[-60px] xl:mb-[-13.85vw] 3xl:mb-[-266px]">
-    <img class="object-cover size-full" src="../../assets/images/home/hero.png" alt="hero">
+    <img class="object-cover size-full" src="./assets/images/home/hero.png" alt="hero">
   </div>
   <div class="container">
     <div class="grid grid-cols-1 lg:grid-cols-[105fr_95fr] gap-10 md::gap-12 2xl:gap-16 3xl:gap-20 items-end lg:-ml-10 xl:-ml-20 3xl:ml-[-100px]">
       <div class="w-full rounded-theme lg:rounded-theme-lg lg:rounded-l-none overflow-hidden h-56 md:h-[40vw] 3xl:h-[725px]">
-        <img class="size-full object-cover" width="891" height="725" src="../../assets/images/home/banner.jpg" alt="banner">
+        <img class="size-full object-cover" width="891" height="725" src="./assets/images/home/banner.jpg" alt="banner">
       </div>
       <div class="flex flex-col gap-6 2xl:gap-7 3xl:gap-8 xl:max-w-[43vw] 3xl:max-w-[837px]">
         <h1 class="h1 text-sky-blue">Power to generate change.</h1> 
@@ -243,7 +243,7 @@
   <div class="container">
     <!-- BG image -->
     <div class="absolute opacity-10 lg:opacity-100 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[54vw] 3xl:left-[1050px] w-[500px] lg:w-[65vw] 3xl:w-[1257px] aspect-square overflow-hidden -z-10">
-      <img class="object-cover size-full" src="../../assets/images/home/circle-waves.gif" alt="waves">
+      <img class="object-cover size-full" src="./assets/images/home/circle-waves.gif" alt="waves">
     </div>
     <div class="flex flex-col gap-6 xl:gap-8 2xl:gap-10 3xl:gap-12 lg:max-w-[54vw] 3xl:max-w-[1020px] md:py-[12.5vw] 3xl:py-[240px]">
       <h2 class="text-sky-blue">
@@ -268,7 +268,7 @@
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-[105fr_95fr] gap-10 md:gap-12 lg:gap-[6vw] 3xl:gap-[120px] items-start lg:-ml-10 xl:-ml-20 3xl:ml-[-100px]">
           <div class="w-full rounded-theme lg:rounded-theme-lg lg:rounded-l-none lg:rounded-br-none overflow-hidden lg:h-[500px] xl:h-[30.2vw] 3xl:h-[580px]">
-            <img class="size-full object-cover" width="800" height="580" src="../../assets/images/home/who-we-are.jpg" alt="who-we-are">
+            <img class="size-full object-cover" width="800" height="580" src="./assets/images/home/who-we-are.jpg" alt="who-we-are">
           </div>
           <div class="flex flex-col gap-10 lg:gap-12 3xl:gap-16 xl:max-w-[34.73vw] 3xl:max-w-[667px] mb-14">
               <p>Established in 2016, Energy Bay was founded to accelerate Australia’s energy transition. With deep expertise in Distributed Energy Resources (DER), we deliver
@@ -312,17 +312,17 @@
             <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px] items-start">
               <div class="h3 shrink-0 md:mt-3">01.</div>
               <div :class="active === 1 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
-                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+                <img class="object-cover size-full" width="352" height="249" src="./assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
               </div>
 
               <div class="flex flex-col flex-1 2xl:max-w-[35vw] 3xl:max-w-[685px] my-3">
                 <h3>Embedded Networks</h3>
                 <div x-show="active === 1" x-collapse x-collapse.duration.500ms class="w-full">
                   <div class="flex flex-col gap-8 pt-8 3xl:pt-10">
-                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="./assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
                     <div class="flex gap-[7vw] 3xl:gap-[135px] transition-all duration-300">
                       <div class="size-[58px] 3xl:size-[73px] shrink-0">
-                        <img class="object-cover size-full" width="73" height="73" src="../../assets/images/svg/embedded-networks.svg" alt="icon">
+                        <img class="object-cover size-full" width="73" height="73" src="./assets/images/svg/embedded-networks.svg" alt="icon">
                       </div>
                       <p> Empowering businesses with private energy networks designed to support scalable, distributed energy infrastructure.</p>
                     </div>
@@ -347,17 +347,17 @@
             <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
               <div class="h3 shrink-0 md:mt-3">02.</div>
               <div :class="active === 2 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
-                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="power-purchase-agreements">
+                <img class="object-cover size-full" width="352" height="249" src="./assets/images/home/offering/power-purchase-agreements.jpg" alt="power-purchase-agreements">
               </div>
 
               <div class="flex flex-col flex-1 2xl:max-w-[35vw] 3xl:max-w-[685px] my-3">
                 <h3>Power Purchase Agreements</h3>
                 <div x-show="active === 2" x-collapse x-collapse.duration.500ms class="w-full">
                   <div class="flex flex-col gap-8 pt-8 3xl:pt-10">
-                  <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="73" height="73" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="icon">
+                  <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="73" height="73" src="./assets/images/home/offering/power-purchase-agreements.jpg" alt="icon">
                   <div class="flex gap-[7vw] 3xl:gap-[135px] transition-all duration-300">
                     <div class="size-[58px] 3xl:size-[73px] shrink-0">
-                      <img class="object-cover size-full" width="73" height="73" src="../../assets/images/svg/power-purchase-agreements.svg" alt="icon">
+                      <img class="object-cover size-full" width="73" height="73" src="./assets/images/svg/power-purchase-agreements.svg" alt="icon">
                     </div>
                     <p>On-site renewable energy infrastructure tailored to your business, delivering reliable, low-cost electricity. We design, install, own, and operate advanced energy technologies that seamlessly integrate with your operations.</p>
                   </div>
@@ -382,7 +382,7 @@
             <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
               <div class="h3 shrink-0 md:mt-3">03.</div>
               <div :class="active === 3 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
-                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+                <img class="object-cover size-full" width="352" height="249" src="./assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
               </div>
 
               <div class="flex flex-col flex-1 2xl:max-w-[35vw] 3xl:max-w-[685px] my-3">
@@ -392,7 +392,7 @@
                     <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="73" height="73" src="../../images/home/offering/community-energy-networks.jpg" alt="icon">
                     <div class="flex gap-[7vw] 3xl:gap-[135px] transition-all duration-300">
                       <div class="size-[58px] 3xl:size-[73px] shrink-0">
-                        <img class="object-cover size-full" width="73" height="73" src="../../assets/images/svg/community-energy-networks.svg" alt="icon">
+                        <img class="object-cover size-full" width="73" height="73" src="./assets/images/svg/community-energy-networks.svg" alt="icon">
                       </div>
                       <p>Community Energy Networks designed for residential communities and strata developments, enabling seamless integration of shared energy infrastructure.</p>
                     </div>
@@ -492,7 +492,7 @@
 
 <!-- Waves Section -->
 <section class="pt-0 pb-0 bg-dark-green">
-    <img class="min-w-screen" width="1920" height="1080" src="../../assets/images/home/long-waves.gif" alt="waves">
+    <img class="min-w-screen" width="1920" height="1080" src="./assets/images/home/long-waves.gif" alt="waves">
 </section>
 
 
@@ -507,18 +507,18 @@
             <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
               <div class="h3 shrink-0 md:mt-3">01.</div>
               <div :class="active === 1 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
-                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+                <img class="object-cover size-full" width="352" height="249" src="./assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
               </div>
 
               <div class="flex flex-col flex-1 my-3">
                 <h3>Moorebank Logistics Park</h3>
                 <div x-show="active === 1" x-collapse x-collapse.duration.500ms class="w-full">
                    <div class="flex flex-col gap-7 3xl:gap-8 pt-8 3xl:pt-10">
-                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="./assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
                     <p>Moorebank Logistics Park is one of the largest embedded network precincts in Australia. The site is currently under construction with up to 60MW of rooftop solar, and 30MVA of BESS planned.</p>
                     <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 2xl:gap-16 3xl:gap-20">
                       <div class="shrink-0">
-                        <img src="../../assets/images/partners/esr.svg" alt="logo">
+                        <img src="./assets/images/partners/esr.svg" alt="logo">
                       </div>
                       <div class="grid grid-cols-2 gap-10 lg:gap-0 lg:grid-cols-[200px_200px] flex-1 whitespace-nowrap">
                         <div class="flex flex-col gap-2">
@@ -554,18 +554,18 @@
             <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
               <div class="h3 shrink-0 md:mt-3">02.</div>
               <div :class="active === 2 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
-                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="power-purchase-agreements">
+                <img class="object-cover size-full" width="352" height="249" src="./assets/images/home/offering/power-purchase-agreements.jpg" alt="power-purchase-agreements">
               </div>
 
               <div class="flex flex-col flex-1 my-3">
                 <h3>Power Purchase Agreements</h3>
                 <div x-show="active === 2" x-collapse x-collapse.duration.500ms class="w-full">
                   <div class="flex flex-col gap-7 3xl:gap-8 pt-8 3xl:pt-10">
-                   <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="embedded-networks">
+                   <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="./assets/images/home/offering/power-purchase-agreements.jpg" alt="embedded-networks">
                    <p>One of the largest regional retail centres between Maroochydore and Mackay, it has more than 150 specialty stores inside the embedded network.</p>
                    <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 2xl:gap-16 3xl:gap-20">
                      <div class="shrink-0">
-                        <img src="../../assets/images/partners/stockland.svg" alt="logo">
+                        <img src="./assets/images/partners/stockland.svg" alt="logo">
                      </div>
                      <div class="grid grid-cols-2 gap-10 lg:gap-0 lg:grid-cols-[200px_200px] flex-1 whitespace-nowrap">
                        <div class="flex flex-col gap-2">
@@ -601,18 +601,18 @@
             <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
               <div class="h3 shrink-0 md:mt-3">03.</div>
               <div :class="active === 3 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
-                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+                <img class="object-cover size-full" width="352" height="249" src="./assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
               </div>
 
               <div class="flex flex-col flex-1 my-3">
                 <h3>Community Energy Networks</h3>
                 <div x-show="active === 3" x-collapse x-collapse.duration.500ms class="w-full">
                   <div class="flex flex-col gap-7 3xl:gap-8 pt-8 3xl:pt-10">
-                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="embedded-networks">
+                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="./assets/images/home/offering/power-purchase-agreements.jpg" alt="embedded-networks">
                    <p>Newly built multi-warehouse estate in an expanding industrial precinct with premium warehousing and ancillary offices.</p>
                    <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 2xl:gap-16 3xl:gap-20">
                      <div class="shrink-0">
-                       <img src="../../assets/images/partners/stockland.svg" alt="logo">
+                       <img src="./assets/images/partners/stockland.svg" alt="logo">
                      </div>
                      <div class="grid grid-cols-2 gap-10 lg:gap-0 lg:grid-cols-[200px_200px] flex-1 whitespace-nowrap">
                        <div class="flex flex-col gap-2">
@@ -676,46 +676,46 @@
       <h2>Our Project Partners</h2>
       <div class="self-end grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 max-w-none 2xl:max-w-[74vw] 3xl:max-w-[1430px] w-full gap-4 md:gap-5 xl:gap-7">
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/esr.svg" alt="esr">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/esr.svg" alt="esr">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/black-rock.svg" alt="black-rock">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/black-rock.svg" alt="black-rock">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/charter-hall.svg" alt="charter-hall">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/charter-hall.svg" alt="charter-hall">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/cocacola.svg" alt="cocacola">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/cocacola.svg" alt="cocacola">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/mccan.svg" alt="mccan">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/mccan.svg" alt="mccan">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/coles.svg" alt="coles">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/coles.svg" alt="coles">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/csiro.svg" alt="csiro">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/csiro.svg" alt="csiro">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/lendlease.svg" alt="lendlease">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/lendlease.svg" alt="lendlease">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/healius.svg" alt="healius">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/healius.svg" alt="healius">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/elanor.svg" alt="elanor">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/elanor.svg" alt="elanor">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/icc-sydney.svg" alt="icc-sydney">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/icc-sydney.svg" alt="icc-sydney">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/logos.svg" alt="logos">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/logos.svg" alt="logos">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/stockland.svg" alt="stockland">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/stockland.svg" alt="stockland">
         </div>
         <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
-          <img class="scale-75 md:scale-100" src="../../assets/images/partners/gwf.svg" alt="gwf">
+          <img class="scale-75 md:scale-100" src="./assets/images/partners/gwf.svg" alt="gwf">
         </div>
       </div>
     </div>
@@ -756,7 +756,7 @@
             <a href="#" class="flex flex-col gap-4">
               <p>Embdded Network</p>
               <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
-                <img class="object-cover size-full" width="407" height="289" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+                <img class="object-cover size-full" width="407" height="289" src="./assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
               </div>
               <h4 class="line-clamp-1">Title of Article</h4>
               <p class="line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
@@ -765,7 +765,7 @@
             <a href="#" class="flex flex-col gap-4">
               <p>Embdded Network</p>
               <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
-                <img class="object-cover size-full" width="407" height="289" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+                <img class="object-cover size-full" width="407" height="289" src="./assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
               </div>
               <h4 class="line-clamp-1">Title of Article</h4>
               <p class="line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
@@ -774,7 +774,7 @@
             <a href="#" class="flex flex-col gap-4">
               <p>Embdded Network</p>
               <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
-                <img class="object-cover size-full" width="407" height="289" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+                <img class="object-cover size-full" width="407" height="289" src="./assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
               </div>
               <h4 class="line-clamp-1">Title of Article</h4>
               <p class="line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
@@ -877,7 +877,7 @@
 <!-- Schedule Call Section -->
 <section class="pt-0 pb-0 bg-light text-dark-blue">
     <div class="absolute inset-0 size-full">
-      <img class="size-full object-cover" src="../../assets/images/common/windmill.webp" alt="bg">
+      <img class="size-full object-cover" src="./assets/images/common/windmill.webp" alt="bg">
     </div>
     <div class="container">
       <div class="flex flex-col">
@@ -955,7 +955,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[112fr_88fr] gap-10 md:gap-[5.6vw] 3xl:gap-[109px]">
       <div class="flex flex-col">
         <a class="mb-6" href="/">
-          <img class="w-[232px] lg:w-[20.9vw] 3xl:w-[403px]" width="403" height="57" src="../../assets/images/svg/logo.svg" alt="logo">
+          <img class="w-[232px] lg:w-[20.9vw] 3xl:w-[403px]" width="403" height="57" src="./assets/images/svg/logo.svg" alt="logo">
         </a>
         <p class="mb-10 md:mb-14">Energy Bay acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, waters and community. We pay respect to their Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander peoples.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-10 lg:gap-0 lg:mb-24">
@@ -983,9 +983,9 @@
               <li><a href="#">Community Energy Networks</a></li>
             </ul>
             <ul class="flex gap-4">
-              <li><a target="_blank" href="#"><img src="../../assets/images/svg/instgram-logo.svg" alt="instgram"></a></li>
-              <li><a target="_blank" href="#"><img src="../../assets/images/svg/linkedin-logo.svg" alt="linkedin"></a></li>
-              <li><a target="_blank" href="#"><img src="../../assets/images/svg/facebook-logo.svg" alt="facebook"></a></li>
+              <li><a target="_blank" href="#"><img src="./assets/images/svg/instgram-logo.svg" alt="instgram"></a></li>
+              <li><a target="_blank" href="#"><img src="./assets/images/svg/linkedin-logo.svg" alt="linkedin"></a></li>
+              <li><a target="_blank" href="#"><img src="./assets/images/svg/facebook-logo.svg" alt="facebook"></a></li>
             </ul>
           </div>
         </div>
@@ -1018,17 +1018,17 @@
         </form>
         <div class="flex gap-6 md:gap-10 xl:gap-12 2xl:gap-14 3xl:gap-16">
           <div class="flex flex-col items-center text-center gap-3 text-xs md:text-[17px]">
-            <img src="../../assets/images/svg/map.svg" alt="Map Australia">
+            <img src="./assets/images/svg/map.svg" alt="Map Australia">
             100% Australian<br> Owned
           </div>
           <div>
-            <img width="117" height="158" src="../../assets/images/common/atlas-green.jpg" alt="atlas">
+            <img width="117" height="158" src="./assets/images/common/atlas-green.jpg" alt="atlas">
           </div>
           <div>
-            <img width="117" height="158" src="../../assets/images/common/atlas-blue.jpg" alt="atlas">
+            <img width="117" height="158" src="./assets/images/common/atlas-blue.jpg" alt="atlas">
           </div>
           <div>
-            <img width="117" height="158" src="../../assets/images/common/atlas-red.jpg" alt="atlas">
+            <img width="117" height="158" src="./assets/images/common/atlas-red.jpg" alt="atlas">
           </div>
         </div>
         
@@ -1064,6 +1064,6 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Main JS -->
-    <script type="text/javascript" src="../assets/js/main.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
   </body>
 </html>

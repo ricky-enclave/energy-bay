@@ -25,7 +25,7 @@ function views() {
 
 // Copy /assets → dist/assets
 function assets() {
-  return src("assets/**/*")
+  return src("src/assets/**/*")
     .pipe(dest("dist/assets"));
 }
 
