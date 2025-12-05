@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>About | Energy Bay</title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="../assets/css/style.css" rel="stylesheet">
+  </head>
+  <body class="font-sans antialiased bg-light text-dark-blue">
+    
+      
+
+<header id="header" x-data="{
+    showSearch: false,
+    showMegaMenu: false,
+    showMobileMenu: false,
+    init() {
+      const closeOnScroll = () => {
+        if (this.showSearch) this.showSearch = false
+        if (this.showMegaMenu) this.showMegaMenu = false
+      }
+
+      window.addEventListener('scroll', closeOnScroll, { passive: true })
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          this.showSearch = false
+          this.showMegaMenu = false
+          this.showMobileMenu = false
+        }
+      })
+
+      this.$watch('showMobileMenu', (val) => {
+        document.body.classList.toggle('overflow-hidden', val)
+      })
+    }
+  }" class="fixed top-0 inset-x-0 z-20 bg-dark-blue text-light">
+  <div class="container">
+    <div class="flex justify-between items-center h-20 lg:h-[8.1vw] 3xl:h-[156px]">
+      <a href="/">
+        <img class="w-[180px] 2xl:w-[13vw] 3xl:w-[261px]" width="261" height="37" src="../../assets/images/svg/logo.svg" alt="logo">
+      </a>
+      <nav class="hidden xl:flex items-center text-[17px] 3xl:text-xl gap-8 2xl:gap-11 3xl:gap-14">
+        <a @click.prevent="showMegaMenu = !showMegaMenu; showSearch = false" class="flex items-center gap-3" href="#">Our Offerings <img class="duration-500" :class="showMegaMenu ? '-scale-y-100' : 'scale-y-100'" src="../../assets/images/svg/arrow-down.svg" alt="icon"></a>
+        <a href="#">Our Projects</a>
+        <a href="#">About Us</a>
+        <a href="#">Sustainability</a>
+        <a href="#">Insights</a>
+        <a href="#">Careers</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button @click="showSearch = !showSearch; showMegaMenu = false; showMobileMenu = false;" type="button" class="flex items-center gap-5 3xl:gap-6 text-[17px] cursor-pointer">
+          <span class="hidden md:block">Search</span>
+          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="../../assets/images/svg/search.svg" alt="search">
+        </button>
+        <button @click="showMobileMenu = !showMobileMenu; showSearch = false;" type="button" class="flex xl:hidden items-center gap-5 3xl:gap-6 text-[17px] cursor-pointer">
+          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="../../assets/images/svg/menu.svg" alt="menu">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mega Menu -->
+  <div x-cloak x-collapse x-collapse.duration.500ms class="!ease-in-out" x-show="showMegaMenu">
+    <div class="bg-light text-dark-blue">
+      <div class="container">
+        <div class="grid grid-cols-[314fr_372fr_314fr] py-12 3xl:py-14">
+          <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 border-r border-r-dark-blue pr-12 2xl:pr-16 3xl:pr-20">
+            <div>
+              <img src="../../assets/images/svg/embedded-networks-dark.svg" alt="icon">
+            </div>
+            <h4>Embedded Networks</h4>
+            <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Find Out More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+          </div>
+          <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 border-r border-r-dark-blue px-12 2xl:px-16 3xl:px-20">
+            <div>
+              <img src="../../assets/images/svg/power-purchase-agreements-dark.svg" alt="icon">
+            </div>
+            <h4>Power Purchase Agreements</h4>
+            <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Find Out More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+          </div>
+          <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 pl-12 2xl:pl-16 3xl:pl-20">
+            <div>
+              <img src="../../assets/images/svg/community-energy-networks-dark.svg" alt="icon">
+            </div>
+            <h4>Community Energy Networks</h4>
+            <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Find Out More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Search -->
+  <div x-cloak x-collapse x-collapse.duration.500ms class="!ease-in-out" x-show="showSearch">
+    <div class="border-t border-t-light">
+      <div class="container">
+        <div class="flex items-center h-18 lg:h-[7vw] 3xl:h-[135px] gap-10">
+          <input type="search" placeholder="Start searching" class="placeholder:text-white text-white h-full flex-1 focus:outline-none">
+          <button @click="showSearch = false" type="button" class="cursor-pointer py-1">
+            <img class="w-6 3xl:w-[31px]" src="../../assets/images/svg/close-search.svg" alt="close">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div x-cloak x-collapse x-collapse.duration.500ms class="!ease-in-out" x-show="showMobileMenu">
+    <div class="bg-dark-blue text-light border-t border-light">
+      <div class="container">
+        <nav class="flex flex-col xl:hidden items-center text-2xl gap-8 h-[calc(100svh-80px)] justify-center">
+          <a href="#">Our Offerings</a>
+          <a href="#">Our Projects</a>
+          <a href="#">About Us</a>
+          <a href="#">Sustainability</a>
+          <a href="#">Insights</a>
+          <a href="#">Careers</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+    
+    
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main class="overflow-hidden">
+          
+
+
+<!-- Hero Section -->
+<section class="pt-28 lg:pt-[13.54vw] 3xl:pt-[260px] pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-dark-blue text-light">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-[105fr_95fr] gap-10 md::gap-12 2xl:gap-16 3xl:gap-20 items-center lg:-ml-10 xl:-ml-20 3xl:ml-[-100px]">
+      <div class="w-full rounded-theme lg:rounded-theme-lg lg:rounded-l-none overflow-hidden h-56 md:h-[40vw] 3xl:h-[725px]">
+        <img class="size-full object-cover" width="891" height="725" src="../../assets/images/home/banner.jpg" alt="banner">
+      </div>
+      <div class="flex flex-col gap-6 2xl:gap-7 3xl:gap-8 xl:max-w-[43vw] 3xl:max-w-[837px]">
+        <h1 class="h1 text-sky-blue">Power to generate change.</h1> 
+        <div class="flex flex-col 2xl:max-w-[525px] gap-9 3xl:gap-10 self-end">
+          <p>To design, fund and operate distributed energy systems that deliver scalable, low-emission outcomes and long-term value for enterprise clients.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Leadership Team Section -->
+<section class="pt-0 pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-dark-blue text-light">
+  <div class="container">
+     <div class="flex flex-col 2xl:grid gap-8 lg:gap-10 2xl:gap-0 2xl:grid-cols-[auto_66vw] 3xl:grid-cols-[auto_1280px]">
+        <div class="flex justify-start">
+          <div class="heading">Our Leadership Team</div>
+        </div>
+        <div class="flex flex-col gap-10 md:gap-12 lg:gap-14 xl:gap-16 2xl:gap-20 3xl:gap-24">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12 2xl:gap-16 3xl:gap-20">
+            <p class="lg:max-w-[703px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.</p>
+            <div class="flex items-center gap-4 md:gap-6">
+              <button type="button" class="bg-sky-blue cursor-pointer size-14 3xl:size-[61px] flex items-center justify-center rounded-full js-team-prev">
+                <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.59961 17.3945C9.25984 17.7349 8.70891 17.7349 8.36914 17.3945L0.605469 9.61719C0.265362 9.27648 0.265362 8.72351 0.60547 8.38281L8.36914 0.605467C8.70891 0.265104 9.25984 0.265104 9.59961 0.605468C9.93936 0.946091 9.93934 1.49823 9.59961 1.83887L3.91797 7.53027L3.32129 8.12793L22.6504 8.12793L22.6504 9.87207L3.32129 9.87207L3.91797 10.4697L9.59961 16.1611C9.93934 16.5018 9.93936 17.0539 9.59961 17.3945Z" fill="#002148" stroke="#AAD2FF" stroke-width="0.7"/>
+                </svg>
+              </button>
+
+              <button type="button" class="bg-sky-blue cursor-pointer size-14 3xl:size-[61px] flex items-center justify-center rounded-full js-team-next">
+                <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.4004 0.605469C13.7402 0.265105 14.2911 0.265105 14.6309 0.605469L22.3945 8.38281C22.7346 8.72351 22.7346 9.27649 22.3945 9.61719L14.6309 17.3945C14.2911 17.7349 13.7402 17.7349 13.4004 17.3945C13.0606 17.0539 13.0607 16.5018 13.4004 16.1611L19.082 10.4697L19.6787 9.87207H0.349609V8.12793H19.6787L19.082 7.53027L13.4004 1.83887C13.0607 1.49823 13.0606 0.946093 13.4004 0.605469Z" fill="#002148" stroke="#AAD2FF" stroke-width="0.7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="swiper team-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-1">
+                    <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                      <img class="object-cover size-full" width="407" height="322" src="../../assets/images/about/team/user.png" alt="user">
+                    </div>
+                    <h4 class="line-clamp-1 mt-3.5 text-sky-blue">Full Name Here</h4>
+                    <h5 class="line-clamp-1">Position Title Here</h5>
+                    <p class="line-clamp-4 mt-1.5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-1">
+                    <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                      <img class="object-cover size-full" width="407" height="322" src="../../assets/images/about/team/user.png" alt="user">
+                    </div>
+                    <h4 class="line-clamp-1 mt-3.5 text-sky-blue">Full Name Here</h4>
+                    <h5 class="line-clamp-1">Position Title Here</h5>
+                    <p class="line-clamp-4 mt-1.5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-1">
+                    <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                      <img class="object-cover size-full" width="407" height="322" src="../../assets/images/about/team/user.png" alt="user">
+                    </div>
+                    <h4 class="line-clamp-1 mt-3.5 text-sky-blue">Full Name Here</h4>
+                    <h5 class="line-clamp-1">Position Title Here</h5>
+                    <p class="line-clamp-4 mt-1.5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-1">
+                    <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                      <img class="object-cover size-full" width="407" height="322" src="../../assets/images/about/team/user.png" alt="user">
+                    </div>
+                    <h4 class="line-clamp-1 mt-3.5 text-sky-blue">Full Name Here</h4>
+                    <h5 class="line-clamp-1">Position Title Here</h5>
+                    <p class="line-clamp-4 mt-1.5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="flex flex-col gap-1">
+                    <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                      <img class="object-cover size-full" width="407" height="322" src="../../assets/images/about/team/user.png" alt="user">
+                    </div>
+                    <h4 class="line-clamp-1 mt-3.5 text-sky-blue">Full Name Here</h4>
+                    <h5 class="line-clamp-1">Position Title Here</h5>
+                    <p class="line-clamp-4 mt-1.5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+     </div>
+  </div>
+</section>
+
+<!-- Image text Section -->
+<section class="pt-0 pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-dark-blue text-light">
+  <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-[105fr_95fr] gap-10 md:gap-12 lg:gap-[6vw] 3xl:gap-[120px] items-start lg:items-center lg:-ml-10 xl:-ml-20 3xl:ml-[-100px]">
+          <div class="w-full rounded-theme lg:rounded-theme-lg lg:rounded-l-none overflow-hidden lg:h-[500px] xl:h-[30.2vw] 3xl:h-[580px]">
+            <img class="size-full object-cover" width="800" height="580" src="../../assets/images/home/who-we-are.jpg" alt="who-we-are">
+          </div>
+          <div class="flex flex-col gap-10 lg:gap-12 3xl:gap-16">
+              <h2><span class="text-sky-blue">We enable real progress</span> — built on performance, not promises.</h2>
+              <p>
+                The transition to clean energy is critical and it calls for solutions that are scalable, reliable and proven.
+                <br><br>
+                At Energy Bay, we design for complexity, deliver with precision, and invest for the long term. Our energy infrastructure scales, lasts and drives measurable change.<br>
+                For developers, for enterprises, for Australia’s energy future, we’re the partner that powers progress.</p>
+          </div>
+     </div>
+  </div>
+</section>
+
+<!-- TimeLine Section -->
+<section class="pt-20 lg:pt-[8.3vw] 3xl:pt-[160px] pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-dark-green text-light" data-timeline-section>
+  <div class="container">
+    <div class="flex flex-col gap-12 lg:gap-16 2xl:gap-20 3xl:gap-24">
+      <h2 class="xl:max-w-[61vw] 3xl:max-w-[1188px]">
+        Established in 2016, Energy Bay was founded to accelerate Australia’s energy transition.
+      </h2>
+
+      <div class="flex flex-col gap-12 lg:gap-16 xl:gap-20 2xl:gap-24 3xl:gap-28">
+        <!-- Timeline bar -->
+        <div data-timeline class="flex flex-col gap-6">
+          <div class="relative">
+            <div class="h-px w-full bg-light"></div>
+            <!-- Moving Dot -->
+            <div data-timeline-dot class="absolute left-0 -top-[7px] lg:-top-[9px] size-4 lg:size-5 3xl:size-[22px] bg-light-green rounded-full ml-[-1vw] md:ml-[-0.5vw]"></div>
+          </div>
+
+          <div class="flex justify-between px-1 lg:px-10 text-xs md:text-sm xl:text-base 2xl:text-[17px]">
+            <span class="timeline-year is-active" data-timeline-year>2016</span>
+            <span class="timeline-year" data-timeline-year>2018</span>
+            <span class="timeline-year" data-timeline-year>2020</span>
+            <span class="timeline-year" data-timeline-year>2022</span>
+            <span class="timeline-year" data-timeline-year>2024</span>
+            <span class="timeline-year" data-timeline-year>2026</span>
+          </div>
+        </div>
+
+        <!-- Year entries (one per label, in same order) -->
+        <div data-timeline-entries class="relative">
+        <!-- 2016 -->
+        <div data-timeline-entry class="grid grid-cols-1 lg:grid-cols-2 xl:flex items-end justify-center gap-12 md:gap-20 lg:gap-[6.66vw] 3xl:gap-32 absolute inset-0">
+          <div class="aspect-695/377 xl:max-w-[36.1vw] 3xl:max-w-[695px] rounded-theme lg:rounded-theme-lg overflow-hidden w-full">
+            <img class="size-full object-cover" width="695" height="377" src="../../assets/images/about/timeline/2016.png" alt="timeline 2016">
+          </div>
+          <div class="flex flex-col xl:max-w-[28.7vw] 2xl:max-w-[552px]">
+            <div class="h2">2016</div>
+            <h3 class="mt-2">Energy Bay Established</h3>
+            <p class="mt-5">
+              In 2016, backed by a consortium of family offices, Energy Bay is established and launches its first brand…
+            </p>
+          </div>
+        </div>
+
+        <!-- 2018 -->
+        <div data-timeline-entry class="grid grid-cols-1 lg:grid-cols-2 xl:flex items-end justify-center gap-12 md:gap-20 lg:gap-[6.66vw] 3xl:gap-32 absolute inset-0">
+          <div class="aspect-695/377 xl:max-w-[36.1vw] 3xl:max-w-[695px] rounded-theme lg:rounded-theme-lg overflow-hidden w-full">
+            <img class="size-full object-cover" width="695" height="377" src="../../assets/images/about/timeline/2018.webp" alt="timeline 2016">
+          </div>
+          <div class="flex flex-col xl:max-w-[28.7vw] 2xl:max-w-[552px]">
+            <div class="h2">2018</div>
+            <h3 class="mt-2">Energy Bay Established</h3>
+            <p class="mt-5">
+              In 2016, backed by a consortium of family offices, Energy Bay is established and launches its first brand…
+            </p>
+          </div>
+        </div>
+
+        <!-- 2020 -->
+        <div data-timeline-entry class="grid grid-cols-1 lg:grid-cols-2 xl:flex items-end justify-center gap-12 md:gap-20 lg:gap-[6.66vw] 3xl:gap-32 absolute inset-0">
+          <div class="aspect-695/377 xl:max-w-[36.1vw] 3xl:max-w-[695px] rounded-theme lg:rounded-theme-lg overflow-hidden w-full">
+            <img class="size-full object-cover" width="695" height="377" src="../../assets/images/about/timeline/2016.png" alt="timeline 2016">
+          </div>
+          <div class="flex flex-col xl:max-w-[28.7vw] 2xl:max-w-[552px]">
+            <div class="h2">2020</div>
+            <h3 class="mt-2">Energy Bay Established</h3>
+            <p class="mt-5">
+              In 2016, backed by a consortium of family offices, Energy Bay is established and launches its first brand…
+            </p>
+          </div>
+        </div>
+
+        <!-- 2022 -->
+        <div data-timeline-entry class="grid grid-cols-1 lg:grid-cols-2 xl:flex items-end justify-center gap-12 md:gap-20 lg:gap-[6.66vw] 3xl:gap-32 absolute inset-0">
+          <div class="aspect-695/377 xl:max-w-[36.1vw] 3xl:max-w-[695px] rounded-theme lg:rounded-theme-lg overflow-hidden w-full">
+            <img class="size-full object-cover" width="695" height="377" src="../../assets/images/about/timeline/2018.webp" alt="timeline 2016">
+          </div>
+          <div class="flex flex-col xl:max-w-[28.7vw] 2xl:max-w-[552px]">
+            <div class="h2">2022</div>
+            <h3 class="mt-2">Energy Bay Established</h3>
+            <p class="mt-5">
+              In 2016, backed by a consortium of family offices, Energy Bay is established and launches its first brand…
+            </p>
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div data-timeline-entry class="grid grid-cols-1 lg:grid-cols-2 xl:flex items-end justify-center gap-12 md:gap-20 lg:gap-[6.66vw] 3xl:gap-32 absolute inset-0">
+          <div class="aspect-695/377 xl:max-w-[36.1vw] 3xl:max-w-[695px] rounded-theme lg:rounded-theme-lg overflow-hidden w-full">
+            <img class="size-full object-cover" width="695" height="377" src="../../assets/images/about/timeline/2016.png" alt="timeline 2016">
+          </div>
+          <div class="flex flex-col xl:max-w-[28.7vw] 2xl:max-w-[552px]">
+            <div class="h2">2024</div>
+            <h3 class="mt-2">Energy Bay Established</h3>
+            <p class="mt-5">
+              In 2016, backed by a consortium of family offices, Energy Bay is established and launches its first brand…
+            </p>
+          </div>
+        </div>
+
+        <!-- 2026 -->
+        <div data-timeline-entry class="grid grid-cols-1 lg:grid-cols-2 xl:flex items-end justify-center gap-12 md:gap-20 lg:gap-[6.66vw] 3xl:gap-32 absolute inset-0">
+          <div class="aspect-695/377 xl:max-w-[36.1vw] 3xl:max-w-[695px] rounded-theme lg:rounded-theme-lg overflow-hidden w-full">
+            <img class="size-full object-cover" width="695" height="377" src="../../assets/images/about/timeline/2018.webp" alt="timeline 2016">
+          </div>
+          <div class="flex flex-col xl:max-w-[28.7vw] 2xl:max-w-[552px]">
+            <div class="h2">2026</div>
+            <h3 class="mt-2">Energy Bay Established</h3>
+            <p class="mt-5">
+              In 2016, backed by a consortium of family offices, Energy Bay is established and launches its first brand…
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TimeLine Section -->
+<section class="pt-0 pb-0 bg-dark-green text-light">
+  <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 md:gap-20 lg:gap-[6.66vw] 3xl:gap-32">
+          <div class="flex flex-col gap-5 md:gap-10">
+            <h2>Diamond Energy</h2>
+            <p class="max-w-[696px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tem
+              por idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor idunt ut labore et dolore magna aliqua.</p>
+            <div class="mt-4">
+              
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-light-green text-dark-green flex items-center justify-center rounded-full">
+      Read More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-light-green text-dark-green -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-light-green fill-dark-green" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+            </div>
+          </div>
+          <div class="hidden lg:block">
+            <img class="w-full lg:w-[41.82vw] 3xl:w-[803px]" width="803" height="175" src="../../assets/images/about/Diamond_Energy_Logo.png" alt="logo">
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Our Values -->
+<section class="pt-20 lg:pt-[8.3vw] 3xl:pt-[160px] pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-dark-green text-light">
+  <div class="container">
+    <div class="flex flex-col xl:flex-row gap-8 md:gap-12 lg:gap-[7vw] 3xl:gap-[135px] justify-between">
+      <div class="flex flex-col gap-8 2xl:gap-10 3xl:gap-12 items-start xl:max-w-[360px] 3xl:max-w-[438px] w-full">
+        <div class="heading">Our Values</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor idunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="flex flex-col xl:max-w-[59vw] 3xl:max-w-[1137px] w-full">
+        <div class="min-h-[7.6vw] 3xl:min-h-[146px] grid grid-cols-1 md:grid-cols-[55fr_45fr] items-center border-b border-light py-6 md:py-6 gap-3 md:gap-0">
+          <h2><span class="text-light-green">S</span>ustainability</h2>
+          <p>We design for a long-term,
+            clean energy future —
+            delivering solutions that 
+           protect people, assets,
+            and the environment.</p>
+        </div>
+        <div class="min-h-[7.6vw] 3xl:min-h-[146px] grid grid-cols-1 md:grid-cols-[55fr_45fr] items-center border-b border-light py-6 md:py-6 gap-3 md:gap-0">
+          <h2><span class="text-light-green">P</span>erformance</h2>
+          <p>We own and operate reliable systems that last.</p>
+        </div>
+        <div class="min-h-[7.6vw] 3xl:min-h-[146px] grid grid-cols-1 md:grid-cols-[55fr_45fr] items-center border-b border-light py-6 md:py-6 gap-3 md:gap-0">
+          <h2><span class="text-light-green">A</span>ssurance</h2>
+          <p>We deliver certainty
+            with trusted systems,
+            dependable partnerships,
+            and proven results.</p>
+        </div>
+        <div class="min-h-[7.6vw] 3xl:min-h-[146px] grid grid-cols-1 md:grid-cols-[55fr_45fr] items-center border-b border-light py-6 md:py-6 gap-3 md:gap-0">
+          <h2><span class="text-light-green">R</span>igour</h2>
+          <p>We bring expert precision and discipline to every solution - No shortcuts.</p>
+        </div>
+        <div class="min-h-[7.6vw] 3xl:min-h-[146px] grid grid-cols-1 md:grid-cols-[55fr_45fr] items-center border-b border-light py-6 md:py-6 gap-3 md:gap-0">
+          <h2><span class="text-light-green">C</span>ustomer-Driven</h2>
+          <p>We turn complexity into clarity - building trust through transparency, shared understanding and strategic delivery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Sustainable Approach -->
+<section class="pt-0 pb-10 3xl:pb-[60px] bg-dark-green text-light">
+  <div class="container">
+    <div class="flex flex-col xl:flex-row gap-12 lg:gap-[7vw] 3xl:gap-[135px] justify-between">
+      <div class="flex flex-col gap-8 2xl:gap-10 3xl:gap-12 items-start xl:max-w-[360px] 3xl:max-w-[438px] w-full">
+        <div class="heading">Our Sustainable Approach</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        <div class="flex flex-col w-full md:w-auto">
+          
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-light-green text-dark-green flex items-center justify-center rounded-full">
+      Read More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-light-green text-dark-green -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-light-green fill-dark-green" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+        </div>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-[200px_200px_200px] 2xl:grid-cols-[12vw_12vw_12vw] 3xl:grid-cols-[213px_213px_213px] gap-x-10 gap-y-14 lg:gap-20 lg:gap-x-[70px] 2xl:gap-x-[12vw] 3xl:gap-x-[230px] md:gap-y-[7.8vw] 3xl:gap-y-[150px]">
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Waves Section -->
+<section class="pt-0 pb-0 bg-dark-green">
+  <img class="min-w-screen" width="1920" height="1080" src="../../assets/images/home/long-waves.gif" alt="waves">
+</section>
+
+
+<!-- Our Offerings -->
+<section class="pt-20 lg:pt-[8.3vw] 3xl:pt-[160px] pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-light text-dark-blue">
+  <div class="container">
+     <div class="flex flex-col items-start">
+        <div class="heading mb-5 3xl:mb-6">Our Offerings</div>
+        <div x-data="{ active: null }" class="flex flex-col w-full">
+
+          <div class="border-b border-current py-6 xl:py-7 2xl:py-8 3xl:py-9">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px] items-start">
+              <div class="h3 shrink-0 md:mt-3">01.</div>
+              <div :class="active === 1 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
+                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+              </div>
+
+              <div class="flex flex-col flex-1 2xl:max-w-[35vw] 3xl:max-w-[685px] my-3">
+                <h3>Embedded Networks</h3>
+                <div x-show="active === 1" x-collapse x-collapse.duration.500ms class="w-full">
+                  <div class="flex flex-col gap-8 pt-8 3xl:pt-10">
+                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+                    <div class="flex gap-[7vw] 3xl:gap-[135px] transition-all duration-300">
+                      <div class="size-[58px] 3xl:size-[73px] shrink-0">
+                        <svg class="size-full" width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M68.7014 51.0542C58.5565 48.4758 51.6009 44.6945 47.3811 41.7826C47.0626 41.5615 46.7553 41.3441 46.4592 41.1305C43.3 38.8407 43.3 34.1449 46.4592 31.8551C46.7553 31.6415 47.0626 31.4241 47.3811 31.203C51.6009 28.2911 58.5565 24.5135 68.6976 21.9314C69.2935 21.7778 69.597 21.1107 69.3272 20.556C68.7763 19.4243 68.1692 18.3262 67.5096 17.2656C67.4047 17.1007 67.2023 17.0183 67.0112 17.0707C60.7826 18.6785 55.6296 20.7284 51.4248 22.8608C50.5891 23.2843 49.7009 22.3961 50.1244 21.5604C52.2568 17.3556 54.303 12.2026 55.9107 5.97778C55.9594 5.78666 55.8807 5.58428 55.7158 5.47935C54.6553 4.81977 53.5572 4.21265 52.4254 3.66175C51.8708 3.39193 51.2037 3.69548 51.05 4.29135C48.4717 14.4362 44.6903 21.3918 41.7784 25.6153C41.5573 25.9339 41.34 26.2412 41.1263 26.5372C38.8365 29.6965 34.1408 29.6965 31.851 26.5372C31.6374 26.2412 31.42 25.9339 31.1989 25.6153C28.287 21.3918 24.5056 14.4362 21.9273 4.2951C21.7736 3.69923 21.1065 3.39567 20.5519 3.6655C19.4201 4.2164 18.3221 4.82352 17.2615 5.48685C17.0966 5.59178 17.0141 5.79415 17.0666 5.98528C18.6743 12.2138 20.7243 17.3668 22.8567 21.5716C23.2802 22.4074 22.392 23.2956 21.5563 22.8721C17.3514 20.7397 12.1984 18.6935 5.97363 17.0857C5.78251 17.037 5.58013 17.1157 5.4752 17.2844C4.81562 18.3449 4.2085 19.443 3.6576 20.5748C3.38777 21.1294 3.69133 21.7965 4.2872 21.9502C14.4283 24.5285 21.3876 28.3099 25.6074 31.2218C25.926 31.4429 26.2333 31.6602 26.5293 31.8739C29.6886 34.1637 29.6886 38.8594 26.5293 41.1492C26.2333 41.3628 25.926 41.5802 25.6074 41.8013C21.3839 44.7132 14.432 48.4908 4.29095 51.0729C3.69508 51.2266 3.39152 51.8937 3.66135 52.4483C4.21225 53.5801 4.81937 54.6781 5.47895 55.7387C5.58388 55.9036 5.78625 55.9861 5.97738 55.9336C12.2059 54.3259 17.3589 52.2759 21.56 50.1435C22.3957 49.72 23.2839 50.6082 22.8604 51.4439C20.728 55.6488 18.6818 60.8018 17.0741 67.0266C17.0254 67.2177 17.1041 67.4201 17.269 67.525C18.3295 68.1846 19.4276 68.7917 20.5594 69.3426C21.114 69.6124 21.7811 69.3089 21.9348 68.713C24.5131 58.5682 28.2945 51.6126 31.2064 47.389C31.4237 47.0705 31.6411 46.7632 31.8585 46.4671C34.1483 43.3079 38.844 43.3079 41.1338 46.4671C41.3475 46.7632 41.5648 47.0705 41.7859 47.389C44.6978 51.6126 48.4792 58.5682 51.0575 68.7092C51.2112 69.3051 51.8783 69.6087 52.4329 69.3388C53.5647 68.7879 54.6628 68.1808 55.7233 67.5175C55.8882 67.4126 55.9707 67.2102 55.9182 67.0191C54.3105 60.7905 52.2605 55.6375 50.1281 51.4327C49.7046 50.597 50.5928 49.7088 51.4286 50.1323C55.6334 52.2647 60.7864 54.3109 67.0112 55.9186C67.2023 55.9673 67.4047 55.8886 67.5096 55.72C68.1692 54.6594 68.7763 53.5614 69.3272 52.4296C69.597 51.8749 69.2935 51.2078 68.6976 51.0542H68.7014ZM38.9939 37.4391C38.9939 38.0012 38.5367 38.4584 37.9746 38.4584H35.029C34.4668 38.4584 34.0096 38.0012 34.0096 37.4391V34.4934C34.0096 33.9313 34.4668 33.4741 35.029 33.4741H37.9746C38.5367 33.4741 38.9939 33.9313 38.9939 34.4934V37.4391Z" fill="#AAD2FF"/>
+                          <path d="M34.9803 19.334H38.0196C38.5556 19.334 38.994 18.8993 38.994 18.3596V1.00811C38.994 0.483443 38.578 0.0562144 38.0534 0.0337286C37.5362 0.0112429 37.019 0 36.4981 0C35.9772 0 35.46 0.0112429 34.9428 0.0337286C34.4182 0.0562144 34.0022 0.483443 34.0022 1.00811V18.3596C34.0022 18.8955 34.4369 19.334 34.9766 19.334H34.9803Z" fill="#AAD2FF"/>
+                          <path d="M38.0196 53.666H34.9802C34.4443 53.666 34.0059 54.1007 34.0059 54.6404V71.9919C34.0059 72.5166 34.4218 72.9438 34.9465 72.9663C35.4637 72.9888 35.9809 73 36.5018 73C37.0227 73 37.5399 72.9888 38.057 72.9663C38.5817 72.9438 38.9977 72.5166 38.9977 71.9919V54.6404C38.9977 54.1045 38.563 53.666 38.0233 53.666H38.0196Z" fill="#AAD2FF"/>
+                          <path d="M72.9775 35.2238C72.9775 35.2238 72.9775 35.2163 72.9775 35.2126C72.9775 35.1189 72.97 35.029 72.9663 34.9353C72.9438 34.4144 72.5128 34.0059 71.9919 34.0059H54.6404C54.1045 34.0059 53.666 34.4406 53.666 34.9802V38.0196C53.666 38.5555 54.1007 38.9939 54.6404 38.9939H71.9919C72.5128 38.9939 72.9438 38.5855 72.9663 38.0645C72.97 37.9708 72.9738 37.8809 72.9775 37.7872C72.9775 37.7835 72.9775 37.7797 72.9775 37.776C72.9925 37.3525 73.0038 36.929 73.0038 36.5018C73.0038 36.0745 72.9925 35.6511 72.9775 35.2276V35.2238Z" fill="#AAD2FF"/>
+                          <path d="M19.334 38.0196V34.9802C19.334 34.4443 18.8993 34.0059 18.3596 34.0059H1.01186C0.490939 34.0059 0.059962 34.4144 0.0374762 34.9353C0.0337286 35.029 0.029981 35.1189 0.0262334 35.2126C0.0262334 35.2163 0.0262334 35.2201 0.0262334 35.2238C0.0112429 35.6473 0 36.0708 0 36.498C0 36.9253 0.0112429 37.3487 0.0262334 37.7722C0.0262334 37.776 0.0262334 37.7797 0.0262334 37.7835C0.0262334 37.8772 0.0337286 37.9671 0.0374762 38.0608C0.059962 38.5817 0.490939 38.9902 1.01186 38.9902H18.3634C18.8993 38.9902 19.3377 38.5555 19.3377 38.0158L19.334 38.0196Z" fill="#AAD2FF"/>
+                        </svg>  
+                      </div>
+                      <p> Empowering businesses with private energy networks designed to support scalable, distributed energy infrastructure.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:ml-auto">
+                <button type="button" @click="active = active === 1 ? null : 1" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-dark-blue hover:text-dark-blue after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-sky-blue hover:after:w-full">
+                      <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-dark-blue stroke-sky-blue" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                        </svg>
+                      </div>
+                    <span x-text="active === 1 ? 'Read Less' : 'Read More'" class="duration-300 group-hover:-translate-x-4"> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-current py-6 xl:py-7 2xl:py-8 3xl:py-9">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
+              <div class="h3 shrink-0 md:mt-3">02.</div>
+              <div :class="active === 2 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
+                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="power-purchase-agreements">
+              </div>
+
+              <div class="flex flex-col flex-1 2xl:max-w-[35vw] 3xl:max-w-[685px] my-3">
+                <h3>Power Purchase Agreements</h3>
+                <div x-show="active === 2" x-collapse x-collapse.duration.500ms class="w-full">
+                  <div class="flex flex-col gap-8 pt-8 3xl:pt-10">
+                  <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="73" height="73" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="icon">
+                  <div class="flex gap-[7vw] 3xl:gap-[135px] transition-all duration-300">
+                    <div class="size-[58px] 3xl:size-[73px] shrink-0">
+                      <svg class="size-full" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M72 36.001C72 35.6842 71.9938 35.3695 71.9856 35.0547C71.9856 35.0527 71.9856 35.0485 71.9856 35.0465C71.9856 35.0136 71.9815 34.9807 71.9815 34.9477C71.9794 34.8799 71.9815 34.812 71.9774 34.7441C71.9774 34.74 71.9774 34.7359 71.9774 34.7317C71.3026 15.466 55.4256 0 36 0C16.5744 0 0.697371 15.466 0.0246857 34.7297C0.0246857 34.7338 0.0246857 34.7379 0.0246857 34.742C0.0226286 34.8099 0.0246857 34.8778 0.0205714 34.9457C0.0205714 34.9786 0.0164571 35.0115 0.0164571 35.0444C0.0164571 35.0465 0.0164571 35.0506 0.0164571 35.0527C0.00617143 35.3674 0 35.6842 0 36.001C0 36.3178 0.00617143 36.6326 0.0144 36.9473C0.0144 36.9494 0.0144 36.9535 0.0144 36.9556C0.0144 36.9885 0.0185143 37.0214 0.0185143 37.0543C0.0205714 37.1222 0.0185143 37.1901 0.0226286 37.258C0.0226286 37.2621 0.0226286 37.2662 0.0226286 37.2703C0.695314 56.536 16.5723 72 35.9979 72C55.4235 72 71.3006 56.534 71.9733 37.2703C71.9733 37.2662 71.9733 37.2621 71.9733 37.258C71.9753 37.1901 71.9733 37.1222 71.9774 37.0543C71.9774 37.0214 71.9815 36.9885 71.9815 36.9556C71.9815 36.9535 71.9815 36.9494 71.9815 36.9473C71.9897 36.6326 71.9959 36.3178 71.9959 36.001H72ZM67.0855 36.1965C67.0855 36.3775 67.0793 36.577 67.0731 36.8075V36.8321L67.0711 36.8815C67.0629 37.1489 67.0464 37.4143 67.0299 37.6797C67.0238 37.8052 67.0155 37.9307 67.0073 38.0562C66.6082 43.4831 64.6416 48.4903 61.4016 52.2632C58.1225 56.0814 53.8869 58.1838 49.4722 58.1838C45.9298 58.1838 42.5026 56.8261 39.5938 54.3163C39.4272 54.1723 39.4025 53.9234 39.5301 53.7444C42.803 49.2124 44.8519 43.3679 45.037 36.9597C45.037 36.9576 45.037 36.9535 45.037 36.9515C45.0453 36.6367 45.0514 36.322 45.0514 36.0051C45.0514 35.6883 45.0453 35.3736 45.037 35.0588C45.037 35.0568 45.037 35.0527 45.037 35.0506C44.8519 28.6424 42.803 22.7979 39.5301 18.2659C39.4005 18.0869 39.4251 17.838 39.5938 17.694C42.5047 15.1842 45.9298 13.8265 49.4722 13.8265C53.8848 13.8265 58.1225 15.9289 61.4016 19.7471C64.6437 23.52 66.6103 28.5293 67.0073 33.9582C67.0155 34.0796 67.0217 34.201 67.0279 34.3203C67.0443 34.5898 67.0608 34.8572 67.069 35.1288V35.1864L67.0711 35.2028C67.0773 35.4332 67.0814 35.6307 67.0834 35.8118C67.0834 35.8776 67.0834 35.9434 67.0834 36.0093C67.0834 36.073 67.0834 36.1389 67.0834 36.2047L67.0855 36.1965ZM10.5984 52.2632C7.3584 48.4903 5.38971 43.4831 4.99269 38.0541C4.98446 37.9266 4.97623 37.8011 4.97006 37.6735C4.9536 37.4102 4.93714 37.1448 4.92891 36.8795V36.7992L4.9248 36.7313C4.92069 36.5956 4.91863 36.4701 4.91657 36.3528C4.91657 36.3487 4.91657 36.3425 4.91657 36.3384C4.91657 36.2211 4.91451 36.1101 4.91451 36.0031C4.91451 35.8961 4.91451 35.783 4.91657 35.6637C4.91657 35.6616 4.91657 35.6575 4.91657 35.6534C4.91657 35.534 4.92069 35.4065 4.9248 35.2687L4.92891 35.1946V35.1185C4.93714 34.8511 4.9536 34.5877 4.97006 34.3224C4.97623 34.1969 4.98446 34.0714 4.99269 33.9459C5.39177 28.519 7.3584 23.5118 10.5984 19.7388C13.8775 15.9207 18.1131 13.8182 22.5278 13.8182C26.0702 13.8182 29.4974 15.176 32.4082 17.6858C32.5749 17.8298 32.5995 18.0787 32.472 18.2577C29.1991 22.7897 27.1502 28.6342 26.965 35.0424C26.965 35.0444 26.965 35.0485 26.965 35.0506C26.9568 35.3654 26.9506 35.6801 26.9506 35.9969C26.9506 36.3137 26.9568 36.6285 26.965 36.9432C26.965 36.9453 26.965 36.9494 26.965 36.9515C27.1502 43.3596 29.1991 49.2041 32.472 53.7362C32.6016 53.9151 32.5769 54.1641 32.4082 54.3081C29.4974 56.8179 26.0722 58.1756 22.5278 58.1756C18.1152 58.1756 13.8775 56.0731 10.5984 52.255V52.2632ZM31.8734 36.8157V36.7478C31.8631 36.4577 31.859 36.2191 31.859 36.001C31.859 35.783 31.8631 35.5443 31.8713 35.2543V35.1884C32.0091 30.463 33.3298 26.0092 35.6379 22.3371C35.8025 22.0758 36.1913 22.0758 36.3559 22.3371C38.664 26.0092 39.9867 30.463 40.1225 35.1884V35.2687H40.1246C40.1328 35.5484 40.1349 35.783 40.1349 36.001C40.1349 36.2191 40.1307 36.4536 40.1246 36.7334L40.1225 36.8136C39.9847 41.539 38.664 45.9929 36.3559 49.665C36.1913 49.9262 35.8025 49.9262 35.6379 49.665C33.3298 45.9929 32.0071 41.539 31.8713 36.8136L31.8734 36.8157ZM49.6862 8.09509C50.0976 8.29669 49.9495 8.90768 49.4928 8.90563C49.4866 8.90563 49.4805 8.90563 49.4722 8.90563C44.5474 8.90563 39.9888 10.8209 36.2777 14.061C36.1173 14.2009 35.8807 14.2009 35.7202 14.061C32.0091 10.8229 27.4505 8.90563 22.5257 8.90563C22.5195 8.90563 22.5134 8.90563 22.5051 8.90563C22.0485 8.90563 21.9003 8.29669 22.3118 8.09509C26.5269 6.01731 31.1863 4.91465 35.9979 4.91465C40.8096 4.91465 45.4711 6.01731 49.6841 8.09509H49.6862ZM22.3138 63.907C21.9024 63.7054 22.0505 63.0944 22.5072 63.0964C22.5134 63.0964 22.5195 63.0964 22.5278 63.0964C27.4526 63.0964 32.0112 61.1812 35.7223 57.9411C35.8827 57.8012 36.1193 57.8012 36.2798 57.9411C39.9909 61.1791 44.5495 63.0964 49.4743 63.0964C49.4805 63.0964 49.4866 63.0964 49.4949 63.0964C49.9515 63.0964 50.0997 63.7054 49.6882 63.907C45.4731 65.9847 40.8137 67.0874 36.0021 67.0874C31.1904 67.0874 26.531 65.9847 22.3159 63.907H22.3138Z" fill="#AAD2FF"/>
+                      </svg> 
+                    </div>
+                    <p>On-site renewable energy infrastructure tailored to your business, delivering reliable, low-cost electricity. We design, install, own, and operate advanced energy technologies that seamlessly integrate with your operations.</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="md:ml-auto">
+                <button type="button" @click="active = active === 2 ? null : 2" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-dark-blue hover:text-dark-blue after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-sky-blue hover:after:w-full">
+                      <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-dark-blue stroke-sky-blue" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                        </svg>
+                      </div>
+                    <span x-text="active === 2 ? 'Read Less' : 'Read More'" class="duration-300 group-hover:-translate-x-4"> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-current py-6 xl:py-7 2xl:py-8 3xl:py-9">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
+              <div class="h3 shrink-0 md:mt-3">03.</div>
+              <div :class="active === 3 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
+                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+              </div>
+
+              <div class="flex flex-col flex-1 2xl:max-w-[35vw] 3xl:max-w-[685px] my-3">
+                <h3>Community Energy Networks</h3>
+                <div x-show="active === 3" x-collapse x-collapse.duration.500ms class="w-full">
+                  <div class="flex flex-col gap-8 pt-8 3xl:pt-10">
+                    <img class="object-cover size-full rounded-theme lg:rounded-theme-lg block md:hidden aspect-352/249" width="73" height="73" src="../../images/home/offering/community-energy-networks.jpg" alt="icon">
+                    <div class="flex gap-[7vw] 3xl:gap-[135px] transition-all duration-300">
+                      <div class="size-[58px] 3xl:size-[73px] shrink-0">
+                        <svg class="size-full" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M72 36.001C72 35.6842 71.9938 35.3695 71.9856 35.0547C71.9856 35.0527 71.9856 35.0485 71.9856 35.0465C71.9856 35.0136 71.9815 34.9807 71.9815 34.9477C71.9794 34.8799 71.9815 34.812 71.9774 34.7441C71.9774 34.74 71.9774 34.7359 71.9774 34.7317C71.3026 15.466 55.4256 0 36 0C16.5744 0 0.697371 15.466 0.0246857 34.7297C0.0246857 34.7338 0.0246857 34.7379 0.0246857 34.742C0.0226286 34.8099 0.0246857 34.8778 0.0205714 34.9457C0.0205714 34.9786 0.0164571 35.0115 0.0164571 35.0444C0.0164571 35.0465 0.0164571 35.0506 0.0164571 35.0527C0.00617143 35.3674 0 35.6842 0 36.001C0 36.3178 0.00617143 36.6326 0.0144 36.9473C0.0144 36.9494 0.0144 36.9535 0.0144 36.9556C0.0144 36.9885 0.0185143 37.0214 0.0185143 37.0543C0.0205714 37.1222 0.0185143 37.1901 0.0226286 37.258C0.0226286 37.2621 0.0226286 37.2662 0.0226286 37.2703C0.695314 56.536 16.5723 72 35.9979 72C55.4235 72 71.3006 56.534 71.9733 37.2703C71.9733 37.2662 71.9733 37.2621 71.9733 37.258C71.9753 37.1901 71.9733 37.1222 71.9774 37.0543C71.9774 37.0214 71.9815 36.9885 71.9815 36.9556C71.9815 36.9535 71.9815 36.9494 71.9815 36.9473C71.9897 36.6326 71.9959 36.3178 71.9959 36.001H72ZM67.0855 36.1965C67.0855 36.3775 67.0793 36.577 67.0731 36.8075V36.8321L67.0711 36.8815C67.0629 37.1489 67.0464 37.4143 67.0299 37.6797C67.0238 37.8052 67.0155 37.9307 67.0073 38.0562C66.6082 43.4831 64.6416 48.4903 61.4016 52.2632C58.1225 56.0814 53.8869 58.1838 49.4722 58.1838C45.9298 58.1838 42.5026 56.8261 39.5938 54.3163C39.4272 54.1723 39.4025 53.9234 39.5301 53.7444C42.803 49.2124 44.8519 43.3679 45.037 36.9597C45.037 36.9576 45.037 36.9535 45.037 36.9515C45.0453 36.6367 45.0514 36.322 45.0514 36.0051C45.0514 35.6883 45.0453 35.3736 45.037 35.0588C45.037 35.0568 45.037 35.0527 45.037 35.0506C44.8519 28.6424 42.803 22.7979 39.5301 18.2659C39.4005 18.0869 39.4251 17.838 39.5938 17.694C42.5047 15.1842 45.9298 13.8265 49.4722 13.8265C53.8848 13.8265 58.1225 15.9289 61.4016 19.7471C64.6437 23.52 66.6103 28.5293 67.0073 33.9582C67.0155 34.0796 67.0217 34.201 67.0279 34.3203C67.0443 34.5898 67.0608 34.8572 67.069 35.1288V35.1864L67.0711 35.2028C67.0773 35.4332 67.0814 35.6307 67.0834 35.8118C67.0834 35.8776 67.0834 35.9434 67.0834 36.0093C67.0834 36.073 67.0834 36.1389 67.0834 36.2047L67.0855 36.1965ZM10.5984 52.2632C7.3584 48.4903 5.38971 43.4831 4.99269 38.0541C4.98446 37.9266 4.97623 37.8011 4.97006 37.6735C4.9536 37.4102 4.93714 37.1448 4.92891 36.8795V36.7992L4.9248 36.7313C4.92069 36.5956 4.91863 36.4701 4.91657 36.3528C4.91657 36.3487 4.91657 36.3425 4.91657 36.3384C4.91657 36.2211 4.91451 36.1101 4.91451 36.0031C4.91451 35.8961 4.91451 35.783 4.91657 35.6637C4.91657 35.6616 4.91657 35.6575 4.91657 35.6534C4.91657 35.534 4.92069 35.4065 4.9248 35.2687L4.92891 35.1946V35.1185C4.93714 34.8511 4.9536 34.5877 4.97006 34.3224C4.97623 34.1969 4.98446 34.0714 4.99269 33.9459C5.39177 28.519 7.3584 23.5118 10.5984 19.7388C13.8775 15.9207 18.1131 13.8182 22.5278 13.8182C26.0702 13.8182 29.4974 15.176 32.4082 17.6858C32.5749 17.8298 32.5995 18.0787 32.472 18.2577C29.1991 22.7897 27.1502 28.6342 26.965 35.0424C26.965 35.0444 26.965 35.0485 26.965 35.0506C26.9568 35.3654 26.9506 35.6801 26.9506 35.9969C26.9506 36.3137 26.9568 36.6285 26.965 36.9432C26.965 36.9453 26.965 36.9494 26.965 36.9515C27.1502 43.3596 29.1991 49.2041 32.472 53.7362C32.6016 53.9151 32.5769 54.1641 32.4082 54.3081C29.4974 56.8179 26.0722 58.1756 22.5278 58.1756C18.1152 58.1756 13.8775 56.0731 10.5984 52.255V52.2632ZM31.8734 36.8157V36.7478C31.8631 36.4577 31.859 36.2191 31.859 36.001C31.859 35.783 31.8631 35.5443 31.8713 35.2543V35.1884C32.0091 30.463 33.3298 26.0092 35.6379 22.3371C35.8025 22.0758 36.1913 22.0758 36.3559 22.3371C38.664 26.0092 39.9867 30.463 40.1225 35.1884V35.2687H40.1246C40.1328 35.5484 40.1349 35.783 40.1349 36.001C40.1349 36.2191 40.1307 36.4536 40.1246 36.7334L40.1225 36.8136C39.9847 41.539 38.664 45.9929 36.3559 49.665C36.1913 49.9262 35.8025 49.9262 35.6379 49.665C33.3298 45.9929 32.0071 41.539 31.8713 36.8136L31.8734 36.8157ZM49.6862 8.09509C50.0976 8.29669 49.9495 8.90768 49.4928 8.90563C49.4866 8.90563 49.4805 8.90563 49.4722 8.90563C44.5474 8.90563 39.9888 10.8209 36.2777 14.061C36.1173 14.2009 35.8807 14.2009 35.7202 14.061C32.0091 10.8229 27.4505 8.90563 22.5257 8.90563C22.5195 8.90563 22.5134 8.90563 22.5051 8.90563C22.0485 8.90563 21.9003 8.29669 22.3118 8.09509C26.5269 6.01731 31.1863 4.91465 35.9979 4.91465C40.8096 4.91465 45.4711 6.01731 49.6841 8.09509H49.6862ZM22.3138 63.907C21.9024 63.7054 22.0505 63.0944 22.5072 63.0964C22.5134 63.0964 22.5195 63.0964 22.5278 63.0964C27.4526 63.0964 32.0112 61.1812 35.7223 57.9411C35.8827 57.8012 36.1193 57.8012 36.2798 57.9411C39.9909 61.1791 44.5495 63.0964 49.4743 63.0964C49.4805 63.0964 49.4866 63.0964 49.4949 63.0964C49.9515 63.0964 50.0997 63.7054 49.6882 63.907C45.4731 65.9847 40.8137 67.0874 36.0021 67.0874C31.1904 67.0874 26.531 65.9847 22.3159 63.907H22.3138Z" fill="#AAD2FF"/>
+                        </svg>  
+                      </div>
+                      <p>Community Energy Networks designed for residential communities and strata developments, enabling seamless integration of shared energy infrastructure.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:ml-auto">
+                <button type="button" @click="active = active === 3 ? null : 3" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-dark-blue hover:text-dark-blue after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-sky-blue hover:after:w-full">
+                      <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-dark-blue stroke-sky-blue" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                        </svg>
+                      </div>
+                    <span x-text="active === 3 ? 'Read Less' : 'Read More'" class="duration-300 group-hover:-translate-x-4"> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row md:justify-end w-full mt-8 3xl:mt-10">
+          
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Read More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+        </div>
+     </div>
+  </div>
+</section>
+
+
+<!-- Our Insights Section -->
+<section class="pt-0 pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-light text-dark-blue">
+  <div class="container">
+     <div class="grid gap-8 lg:gap-10 2xl:gap-0 2xl:grid-cols-[auto_66vw] 3xl:grid-cols-[auto_1280px]">
+        <div class="flex justify-start">
+          <div class="heading">Our Insights</div>
+        </div>
+        <div class="flex flex-col gap-10 md:gap-12 lg:gap-14 xl:gap-16 2xl:gap-20 3xl:gap-24">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12 2xl:gap-16 3xl:gap-20">
+            <p class="lg:max-w-[703px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.</p>
+            <div>
+              
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Read More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
+            <a href="#" class="flex flex-col gap-4">
+              <p>Embdded Network</p>
+              <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                <img class="object-cover size-full" width="407" height="289" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+              </div>
+              <h4 class="line-clamp-1">Title of Article</h4>
+              <p class="line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p class="mt-4">21 Aug 2025</p>
+            </a>
+            <a href="#" class="flex flex-col gap-4">
+              <p>Embdded Network</p>
+              <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                <img class="object-cover size-full" width="407" height="289" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+              </div>
+              <h4 class="line-clamp-1">Title of Article</h4>
+              <p class="line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p class="mt-4">21 Aug 2025</p>
+            </a>
+            <a href="#" class="flex flex-col gap-4">
+              <p>Embdded Network</p>
+              <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                <img class="object-cover size-full" width="407" height="289" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+              </div>
+              <h4 class="line-clamp-1">Title of Article</h4>
+              <p class="line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p class="mt-4">21 Aug 2025</p>
+            </a>
+          </div>
+        </div>
+     </div>
+  </div>
+</section>
+
+
+
+<!-- Join the Team -->
+<section class="pt-10 3xl:pt-[60px] pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-light text-dark-blue">
+  <div class="container">
+    <div class="flex flex-col xl:flex-row gap-8 md:gap-12 lg:gap-[7vw] 3xl:gap-[135px] justify-between">
+      <div class="flex flex-col gap-8 2xl:gap-10 3xl:gap-12 items-start xl:max-w-[360px] 3xl:max-w-[438px] w-full">
+        <div class="heading">Join the Team</div>
+        <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+          <img class="object-cover size-full" width="407" height="322" src="../../assets/images/home/who-we-are.jpg" alt="who">
+        </div>
+      </div>
+      <div class="flex flex-col xl:max-w-[59vw] 3xl:max-w-[1137px] w-full gap-8 xl:gap-12 3xl:gap-16">
+        <p class="max-w-[607px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor austau incididunt ut labore et dolore magnaao aliqua.</p>
+        <div class="flex flex-col">
+          <div class="min-h-[6.62vw] 3xl:min-h-[108px] flex flex-row justify-between items-start md:items-center border-b border-dark-blue gap-4 py-6">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-3">
+              <p>Job title here</p>
+              <p>Full-time Position</p>
+              <p>NSW, Australia</p>
+            </div>
+            <a href="#" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-dark-blue hover:text-dark-blue after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-sky-blue hover:after:w-full">
+                  <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-dark-blue stroke-sky-blue" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                    </svg>
+                  </div>
+                <span class="duration-300 group-hover:-translate-x-4">Read More</span>
+            </a>
+          </div>
+          <div class="min-h-[6.62vw] 3xl:min-h-[108px] flex flex-row justify-between items-start md:items-center border-b border-dark-blue gap-4 py-6">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-3">
+              <p>Job title here</p>
+              <p>Full-time Position</p>
+              <p>NSW, Australia</p>
+            </div>
+            <a href="#" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-dark-blue hover:text-dark-blue after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-sky-blue hover:after:w-full">
+                  <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-dark-blue stroke-sky-blue" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                    </svg>
+                  </div>
+                <span class="duration-300 group-hover:-translate-x-4">Read More</span>
+            </a>
+          </div>
+          <div class="min-h-[6.62vw] 3xl:min-h-[108px] flex flex-row justify-between items-start md:items-center border-b border-dark-blue gap-4 py-6">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-3">
+              <p>Job title here</p>
+              <p>Full-time Position</p>
+              <p>NSW, Australia</p>
+            </div>
+            <a href="#" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-dark-blue hover:text-dark-blue after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-sky-blue hover:after:w-full">
+                  <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path class="fill-dark-blue stroke-sky-blue" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                    </svg>
+                  </div>
+                <span class="duration-300 group-hover:-translate-x-4">Read More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        </main>
+        
+          <!-- Footer Section -->
+<footer class="bg-dark-blue text-light rounded-t-theme lg:rounded-t-theme-lg py-20 lg:py-[6.6vw] 3xl:py-32 -mt-4 relative z-20">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[112fr_88fr] gap-10 md:gap-[5.6vw] 3xl:gap-[109px]">
+      <div class="flex flex-col">
+        <a class="mb-6" href="/">
+          <img class="w-[232px] lg:w-[20.9vw] 3xl:w-[403px]" width="403" height="57" src="../../assets/images/svg/logo.svg" alt="logo">
+        </a>
+        <p class="mb-10 md:mb-14">Energy Bay acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, waters and community. We pay respect to their Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander peoples.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-10 lg:gap-0 lg:mb-24">
+          <ul class="flex flex-col gap-4 font-bold">
+            <li><a href="#">Our Projects</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Insights</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="flex flex-col gap-5">
+            <div class="font-bold">About Us</div>
+            <ul class="flex flex-col gap-3 text-sky-blue">
+              <li><a href="#">Our Mission</a></li>
+              <li><a href="#">Brand Story</a></li>
+              <li><a href="#">Why Energy Bay</a></li>
+              <li><a href="#">Our Leadership</a></li>
+              <li><a href="#">Join The Team</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-5">
+            <div class="font-bold">Our Offerings</div>
+            <ul class="flex flex-col gap-3 text-sky-blue">
+              <li><a href="#">Embedded Networks</a></li>
+              <li><a href="#">Power Purchased Agreements</a></li>
+              <li><a href="#">Community Energy Networks</a></li>
+            </ul>
+            <ul class="flex gap-4">
+              <li><a target="_blank" href="#"><img src="../../assets/images/svg/instgram-logo.svg" alt="instgram"></a></li>
+              <li><a target="_blank" href="#"><img src="../../assets/images/svg/linkedin-logo.svg" alt="linkedin"></a></li>
+              <li><a target="_blank" href="#"><img src="../../assets/images/svg/facebook-logo.svg" alt="facebook"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-end gap-[4.6vw] 3xl:gap-[89px]">
+          <p>Level 16/167 Macquarie St,<br> Sydney NSW 2000</p>
+          <p>&copy; 2025 Energy Bay</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-10 md:gap-12 lg:gap-16">
+        <form class="flex flex-col">
+          <p class="mb-6 md:mb-7">Stay up to date on all Energy Bay insights by subscribing to our Newsletter.</p>
+          <input required type="email" placeholder="Enter your email address" class="mb-4 px-8 py-4 rounded-full bg-white text-dark-blue placeholder:text-dark-blue/60 focus:outline-none">
+          
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Submit
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+        </form>
+        <div class="flex gap-6 md:gap-10 xl:gap-12 2xl:gap-14 3xl:gap-16">
+          <div class="flex flex-col items-center text-center gap-3 text-xs md:text-[17px]">
+            <img src="../../assets/images/svg/map.svg" alt="Map Australia">
+            100% Australian<br> Owned
+          </div>
+          <div>
+            <img width="117" height="158" src="../../assets/images/common/atlas-green.jpg" alt="atlas">
+          </div>
+          <div>
+            <img width="117" height="158" src="../../assets/images/common/atlas-blue.jpg" alt="atlas">
+          </div>
+          <div>
+            <img width="117" height="158" src="../../assets/images/common/atlas-red.jpg" alt="atlas">
+          </div>
+        </div>
+        
+        
+        <ul class="flex flex-col md:flex-row items-center justify-between mt-auto gap-3 md:gap-4">
+          <li>ABN 93 001 263 734</li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="javascript:;">Back To The Top</a></li>
+        </ul>
+
+        <div class="flex flex-col md:flex-row lg:hidden items-center md:items-end gap-3 md:gap-10 justify-between text-center md:text-start">
+          <p>Level 16/167 Macquarie St,<br> Sydney NSW 2000</p>
+          <p>&copy; 2025 Energy Bay</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+        
+      </div>
+    </div>
+
+    <!--  GSAP -->  
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <!-- Alpine Plugins -->
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Main JS -->
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+  </body>
+</html>

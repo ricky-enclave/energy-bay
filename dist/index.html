@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home | Energy Bay</title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="../assets/css/style.css" rel="stylesheet">
+  </head>
+  <body class="font-sans antialiased bg-light text-dark-blue">
+    
+      
+
+<header id="header" x-data="{
+    showSearch: false,
+    showMegaMenu: false,
+    showMobileMenu: false,
+    init() {
+      const closeOnScroll = () => {
+        if (this.showSearch) this.showSearch = false
+        if (this.showMegaMenu) this.showMegaMenu = false
+      }
+
+      window.addEventListener('scroll', closeOnScroll, { passive: true })
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          this.showSearch = false
+          this.showMegaMenu = false
+          this.showMobileMenu = false
+        }
+      })
+
+      this.$watch('showMobileMenu', (val) => {
+        document.body.classList.toggle('overflow-hidden', val)
+      })
+    }
+  }" class="fixed top-0 inset-x-0 z-20 bg-dark-blue text-light">
+  <div class="container">
+    <div class="flex justify-between items-center h-20 lg:h-[8.1vw] 3xl:h-[156px]">
+      <a href="/">
+        <img class="w-[180px] 2xl:w-[13vw] 3xl:w-[261px]" width="261" height="37" src="../../assets/images/svg/logo.svg" alt="logo">
+      </a>
+      <nav class="hidden xl:flex items-center text-[17px] 3xl:text-xl gap-8 2xl:gap-11 3xl:gap-14">
+        <a @click.prevent="showMegaMenu = !showMegaMenu; showSearch = false" class="flex items-center gap-3" href="#">Our Offerings <img class="duration-500" :class="showMegaMenu ? '-scale-y-100' : 'scale-y-100'" src="../../assets/images/svg/arrow-down.svg" alt="icon"></a>
+        <a href="#">Our Projects</a>
+        <a href="#">About Us</a>
+        <a href="#">Sustainability</a>
+        <a href="#">Insights</a>
+        <a href="#">Careers</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button @click="showSearch = !showSearch; showMegaMenu = false; showMobileMenu = false;" type="button" class="flex items-center gap-5 3xl:gap-6 text-[17px] cursor-pointer">
+          <span class="hidden md:block">Search</span>
+          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="../../assets/images/svg/search.svg" alt="search">
+        </button>
+        <button @click="showMobileMenu = !showMobileMenu; showSearch = false;" type="button" class="flex xl:hidden items-center gap-5 3xl:gap-6 text-[17px] cursor-pointer">
+          <img class="w-6 xl:w-[2.2vw] 3xl:w-[43px]" width="43" height="43" src="../../assets/images/svg/menu.svg" alt="menu">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mega Menu -->
+  <div x-cloak x-collapse x-collapse.duration.500ms class="!ease-in-out" x-show="showMegaMenu">
+    <div class="bg-light text-dark-blue">
+      <div class="container">
+        <div class="grid grid-cols-[314fr_372fr_314fr] py-12 3xl:py-14">
+          <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 border-r border-r-dark-blue pr-12 2xl:pr-16 3xl:pr-20">
+            <div>
+              <img src="../../assets/images/svg/embedded-networks-dark.svg" alt="icon">
+            </div>
+            <h4>Embedded Networks</h4>
+            <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Find Out More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+          </div>
+          <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 border-r border-r-dark-blue px-12 2xl:px-16 3xl:px-20">
+            <div>
+              <img src="../../assets/images/svg/power-purchase-agreements-dark.svg" alt="icon">
+            </div>
+            <h4>Power Purchase Agreements</h4>
+            <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Find Out More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+          </div>
+          <div class="flex flex-col items-start gap-10 pb-8 2xl:pb-10 pl-12 2xl:pl-16 3xl:pl-20">
+            <div>
+              <img src="../../assets/images/svg/community-energy-networks-dark.svg" alt="icon">
+            </div>
+            <h4>Community Energy Networks</h4>
+            <p class="max-w-[432px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Find Out More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Search -->
+  <div x-cloak x-collapse x-collapse.duration.500ms class="!ease-in-out" x-show="showSearch">
+    <div class="border-t border-t-light">
+      <div class="container">
+        <div class="flex items-center h-18 lg:h-[7vw] 3xl:h-[135px] gap-10">
+          <input type="search" placeholder="Start searching" class="placeholder:text-white text-white h-full flex-1 focus:outline-none">
+          <button @click="showSearch = false" type="button" class="cursor-pointer py-1">
+            <img class="w-6 3xl:w-[31px]" src="../../assets/images/svg/close-search.svg" alt="close">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div x-cloak x-collapse x-collapse.duration.500ms class="!ease-in-out" x-show="showMobileMenu">
+    <div class="bg-dark-blue text-light border-t border-light">
+      <div class="container">
+        <nav class="flex flex-col xl:hidden items-center text-2xl gap-8 h-[calc(100svh-80px)] justify-center">
+          <a href="#">Our Offerings</a>
+          <a href="#">Our Projects</a>
+          <a href="#">About Us</a>
+          <a href="#">Sustainability</a>
+          <a href="#">Insights</a>
+          <a href="#">Careers</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+    
+    
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main class="overflow-hidden">
+          
+
+
+<!-- Hero Section -->
+<section class="pt-0 pb-0 bg-dark-blue text-light">
+  <!-- BG image -->
+  <div class="w-full h-64 md:h-80 lg:h-[35vw] 3xl:h-[674px] overflow-hidden -z-10 -mb-20 md:-mb-32 lg:mb-[-60px] xl:mb-[-13.85vw] 3xl:mb-[-266px]">
+    <img class="object-cover size-full" src="../../assets/images/home/hero.png" alt="hero">
+  </div>
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-[105fr_95fr] gap-10 md::gap-12 2xl:gap-16 3xl:gap-20 items-end lg:-ml-10 xl:-ml-20 3xl:ml-[-100px]">
+      <div class="w-full rounded-theme lg:rounded-theme-lg lg:rounded-l-none overflow-hidden h-56 md:h-[40vw] 3xl:h-[725px]">
+        <img class="size-full object-cover" width="891" height="725" src="../../assets/images/home/banner.jpg" alt="banner">
+      </div>
+      <div class="flex flex-col gap-6 2xl:gap-7 3xl:gap-8 xl:max-w-[43vw] 3xl:max-w-[837px]">
+        <h1 class="h1 text-sky-blue">Power to generate change.</h1> 
+        <div class="flex flex-col 2xl:max-w-[525px] gap-9 3xl:gap-10 self-end">
+          <p>As an industry leader, we aspire to drive the shift toward intelligent, eco-friendly infrastructure that not only protects but strengthens communities, industries, and natural resources alike.</p>
+          <div class="flex flex-col md:flex-row md:items-center gap-4 lg:gap-8">
+            
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Our Offerings
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+            
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-light text-dark-blue flex items-center justify-center rounded-full">
+      About Us
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-light text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-light fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sustainble Developement -->
+<section class="pt-20 lg:pt-[8.3vw] 3xl:pt-[160px] pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-dark-blue text-light lg:-z-10">
+  <div class="container">
+    <!-- BG image -->
+    <div class="absolute opacity-10 lg:opacity-100 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[54vw] 3xl:left-[1050px] w-[500px] lg:w-[65vw] 3xl:w-[1257px] aspect-square overflow-hidden -z-10">
+      <img class="object-cover size-full" src="../../assets/images/home/circle-waves.gif" alt="waves">
+    </div>
+    <div class="flex flex-col gap-6 xl:gap-8 2xl:gap-10 3xl:gap-12 lg:max-w-[54vw] 3xl:max-w-[1020px] md:py-[12.5vw] 3xl:py-[240px]">
+      <h2 class="text-sky-blue">
+        Sustainable distributed energy infrastructure that powers Australia's clean energy future.
+      </h2>
+      <p class="xl:max-w-[440px] 3xl:max-w-[470px] self-end">
+        We are leading Australia's transition to clean energy through investment in practical, engineered infrastructure — co-located at property assets and delivered with clarity, control, and no compromises.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Who we are Section -->
+<section class="pt-0 pb-0 bg-dark-blue text-light">
+  <div class="container">
+     <div class="flex flex-col gap-10 lg:gap-12 2xl:gap-16 3xl:gap-20">
+        <div class="flex flex-col items-start lg:flex-row justify-between gap-8 lg:gap-10 xl:gap-16 3xl:gap-20">
+          <div class="heading">Who We Are</div>
+          <div class="lg:max-w-[63vw] 3xl:max-w-[1210px]">
+            <h2 class="h2">Energy Bay is <span class="text-sky-blue">Australia’s sustainable</span>  energy infrastructure partner.</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-[105fr_95fr] gap-10 md:gap-12 lg:gap-[6vw] 3xl:gap-[120px] items-start lg:-ml-10 xl:-ml-20 3xl:ml-[-100px]">
+          <div class="w-full rounded-theme lg:rounded-theme-lg lg:rounded-l-none lg:rounded-br-none overflow-hidden lg:h-[500px] xl:h-[30.2vw] 3xl:h-[580px]">
+            <img class="size-full object-cover" width="800" height="580" src="../../assets/images/home/who-we-are.jpg" alt="who-we-are">
+          </div>
+          <div class="flex flex-col gap-10 lg:gap-12 3xl:gap-16 xl:max-w-[34.73vw] 3xl:max-w-[667px] mb-14">
+              <p>Established in 2016, Energy Bay was founded to accelerate Australia’s energy transition. With deep expertise in Distributed Energy Resources (DER), we deliver
+                tailored energy infrastructure solutions that help enterprises navigate complexity with confidence. By merging innovation with impact, we’re driving Australia's
+                shift toward a more sustainable, resilient energy future. <br><br>
+                Born from deep industry experience, we set out to do things differently — to design, integrate and orchestrate systems that deliver scalable, sustainable
+                outcomes. Not just for now, but for the long term.</p>
+              <div class="flex flex-col md:flex-row md:items-center gap-8">
+                
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Read More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+              </div>
+          </div>
+        </div>
+     </div>
+  </div>
+</section>
+
+<!-- Our Offerings -->
+<section class="pt-20 lg:pt-[8.3vw] 3xl:pt-[160px] pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-dark-green text-light">
+  <div class="container">
+     <div class="flex flex-col items-start">
+        <div class="heading mb-5 3xl:mb-6">Our Offerings</div>
+        <div x-data="{ active: null }" class="flex flex-col w-full">
+
+          <div class="border-b border-current py-6 xl:py-7 2xl:py-8 3xl:py-9">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px] items-start">
+              <div class="h3 shrink-0 md:mt-3">01.</div>
+              <div :class="active === 1 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
+                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+              </div>
+
+              <div class="flex flex-col flex-1 2xl:max-w-[35vw] 3xl:max-w-[685px] my-3">
+                <h3>Embedded Networks</h3>
+                <div x-show="active === 1" x-collapse x-collapse.duration.500ms class="w-full">
+                  <div class="flex flex-col gap-8 pt-8 3xl:pt-10">
+                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+                    <div class="flex gap-[7vw] 3xl:gap-[135px] transition-all duration-300">
+                      <div class="size-[58px] 3xl:size-[73px] shrink-0">
+                        <img class="object-cover size-full" width="73" height="73" src="../../assets/images/svg/embedded-networks.svg" alt="icon">
+                      </div>
+                      <p> Empowering businesses with private energy networks designed to support scalable, distributed energy infrastructure.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:ml-auto">
+                <button type="button" @click="active = active === 1 ? null : 1" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-light hover:text-dark-green after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-light-green hover:after:w-full">
+                      <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-dark-green stroke-light-green" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                        </svg>
+                      </div>
+                    <span x-text="active === 1 ? 'Read Less' : 'Read More'" class="duration-300 group-hover:-translate-x-4"> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-current py-6 xl:py-7 2xl:py-8 3xl:py-9">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
+              <div class="h3 shrink-0 md:mt-3">02.</div>
+              <div :class="active === 2 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
+                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="power-purchase-agreements">
+              </div>
+
+              <div class="flex flex-col flex-1 2xl:max-w-[35vw] 3xl:max-w-[685px] my-3">
+                <h3>Power Purchase Agreements</h3>
+                <div x-show="active === 2" x-collapse x-collapse.duration.500ms class="w-full">
+                  <div class="flex flex-col gap-8 pt-8 3xl:pt-10">
+                  <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="73" height="73" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="icon">
+                  <div class="flex gap-[7vw] 3xl:gap-[135px] transition-all duration-300">
+                    <div class="size-[58px] 3xl:size-[73px] shrink-0">
+                      <img class="object-cover size-full" width="73" height="73" src="../../assets/images/svg/power-purchase-agreements.svg" alt="icon">
+                    </div>
+                    <p>On-site renewable energy infrastructure tailored to your business, delivering reliable, low-cost electricity. We design, install, own, and operate advanced energy technologies that seamlessly integrate with your operations.</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+
+              <div class="md:ml-auto">
+                <button type="button" @click="active = active === 2 ? null : 2" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-light hover:text-dark-green after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-light-green hover:after:w-full">
+                      <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-dark-green stroke-light-green" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                        </svg>
+                      </div>
+                    <span x-text="active === 2 ? 'Read Less' : 'Read More'" class="duration-300 group-hover:-translate-x-4"> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-current py-6 xl:py-7 2xl:py-8 3xl:py-9">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
+              <div class="h3 shrink-0 md:mt-3">03.</div>
+              <div :class="active === 3 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
+                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+              </div>
+
+              <div class="flex flex-col flex-1 2xl:max-w-[35vw] 3xl:max-w-[685px] my-3">
+                <h3>Community Energy Networks</h3>
+                <div x-show="active === 3" x-collapse x-collapse.duration.500ms class="w-full">
+                  <div class="flex flex-col gap-8 pt-8 3xl:pt-10">
+                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="73" height="73" src="../../images/home/offering/community-energy-networks.jpg" alt="icon">
+                    <div class="flex gap-[7vw] 3xl:gap-[135px] transition-all duration-300">
+                      <div class="size-[58px] 3xl:size-[73px] shrink-0">
+                        <img class="object-cover size-full" width="73" height="73" src="../../assets/images/svg/community-energy-networks.svg" alt="icon">
+                      </div>
+                      <p>Community Energy Networks designed for residential communities and strata developments, enabling seamless integration of shared energy infrastructure.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:ml-auto">
+                <button type="button" @click="active = active === 3 ? null : 3" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-light hover:text-dark-green after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-light-green hover:after:w-full">
+                      <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-dark-green stroke-light-green" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                        </svg>
+                      </div>
+                    <span x-text="active === 3 ? 'Read Less' : 'Read More'" class="duration-300 group-hover:-translate-x-4"> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row md:justify-end w-full mt-8 3xl:mt-10">
+          
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-light-green text-dark-green flex items-center justify-center rounded-full">
+      Read More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-light-green text-dark-green -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-light-green fill-dark-green" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+        </div>
+     </div>
+  </div>
+</section>
+
+
+<!-- Our Sustainable Approach -->
+<section class="pt-10 3xl:pt-[60px] pb-10 3xl:pb-[60px] bg-dark-green text-light">
+  <div class="container">
+    <div class="flex flex-col xl:flex-row gap-12 lg:gap-[7vw] 3xl:gap-[135px] justify-between">
+      <div class="flex flex-col gap-8 2xl:gap-10 3xl:gap-12 items-start xl:max-w-[360px] 3xl:max-w-[438px] w-full">
+        <div class="heading">Our Sustainable Approach</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        <div class="flex flex-col w-full md:w-auto">
+          
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-light-green text-dark-green flex items-center justify-center rounded-full">
+      Read More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-light-green text-dark-green -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-light-green fill-dark-green" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+        </div>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-[200px_200px_200px] 2xl:grid-cols-[12vw_12vw_12vw] 3xl:grid-cols-[213px_213px_213px] gap-x-10 gap-y-14 lg:gap-20 lg:gap-x-[70px] 2xl:gap-x-[12vw] 3xl:gap-x-[230px] md:gap-y-[7.8vw] 3xl:gap-y-[150px]">
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+        <div class="flex flex-col">
+          <div class="stat text-light-green">10<sup>%</sup></div>
+          <p>Decrease in the cost of Solar energy since 2010</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Waves Section -->
+<section class="pt-0 pb-0 bg-dark-green">
+    <img class="min-w-screen" width="1920" height="1080" src="../../assets/images/home/long-waves.gif" alt="waves">
+</section>
+
+
+<!-- Recent Projects -->
+<section class="pt-20 lg:pt-[8.3vw] 3xl:pt-[160px] pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-light text-dark-blue">
+  <div class="container">
+     <div class="flex flex-col items-start">
+        <div class="heading mb-5 3xl:mb-6">Recent Projects</div>
+        <div x-data="{ active: null }" class="flex flex-col w-full">
+
+          <div class="border-b border-current py-6 xl:py-7 2xl:py-8 3xl:py-9">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
+              <div class="h3 shrink-0 md:mt-3">01.</div>
+              <div :class="active === 1 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
+                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+              </div>
+
+              <div class="flex flex-col flex-1 my-3">
+                <h3>Moorebank Logistics Park</h3>
+                <div x-show="active === 1" x-collapse x-collapse.duration.500ms class="w-full">
+                   <div class="flex flex-col gap-7 3xl:gap-8 pt-8 3xl:pt-10">
+                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="../../assets/images/home/offering/embedded-networks.jpg" alt="embedded-networks">
+                    <p>Moorebank Logistics Park is one of the largest embedded network precincts in Australia. The site is currently under construction with up to 60MW of rooftop solar, and 30MVA of BESS planned.</p>
+                    <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 2xl:gap-16 3xl:gap-20">
+                      <div class="shrink-0">
+                        <img src="../../assets/images/partners/esr.svg" alt="logo">
+                      </div>
+                      <div class="grid grid-cols-2 gap-10 lg:gap-0 lg:grid-cols-[200px_200px] flex-1 whitespace-nowrap">
+                        <div class="flex flex-col gap-2">
+                          <p>Solution</p>
+                          <p>PV Size MWdc</p>
+                          <p>BESS Storage MWh</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                          <p>Renewable Energy</p>
+                          <p>60</p>
+                          <p>300</p>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                </div>
+              </div>
+
+              <div class="md:ml-auto">
+                <button type="button" @click="active = active === 1 ? null : 1" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-dark-blue hover:text-dark-blue after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-sky-blue hover:after:w-full">
+                      <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-dark-blue stroke-sky-blue" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                        </svg>
+                      </div>
+                    <span x-text="active === 1 ? 'Read Less' : 'Read More'" class="duration-300 group-hover:-translate-x-4"> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-current py-6 xl:py-7 2xl:py-8 3xl:py-9">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
+              <div class="h3 shrink-0 md:mt-3">02.</div>
+              <div :class="active === 2 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
+                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="power-purchase-agreements">
+              </div>
+
+              <div class="flex flex-col flex-1 my-3">
+                <h3>Power Purchase Agreements</h3>
+                <div x-show="active === 2" x-collapse x-collapse.duration.500ms class="w-full">
+                  <div class="flex flex-col gap-7 3xl:gap-8 pt-8 3xl:pt-10">
+                   <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="embedded-networks">
+                   <p>One of the largest regional retail centres between Maroochydore and Mackay, it has more than 150 specialty stores inside the embedded network.</p>
+                   <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 2xl:gap-16 3xl:gap-20">
+                     <div class="shrink-0">
+                        <img src="../../assets/images/partners/stockland.svg" alt="logo">
+                     </div>
+                     <div class="grid grid-cols-2 gap-10 lg:gap-0 lg:grid-cols-[200px_200px] flex-1 whitespace-nowrap">
+                       <div class="flex flex-col gap-2">
+                         <p>Solution</p>
+                         <p>PV Size MWdc</p>
+                         <p>BESS Storage MWh</p>
+                       </div>
+                       <div class="flex flex-col gap-2">
+                         <p>Renewable Energy</p>
+                         <p>60</p>
+                         <p>300</p>
+                       </div>
+                     </div>
+                   </div>
+                  </div>
+               </div>
+              </div>
+
+              <div class="md:ml-auto">
+                <button type="button" @click="active = active === 2 ? null : 2" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-dark-blue hover:text-dark-blue after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-sky-blue hover:after:w-full">
+                      <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-dark-blue stroke-sky-blue" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                        </svg>
+                      </div>
+                    <span x-text="active === 2 ? 'Read Less' : 'Read More'" class="duration-300 group-hover:-translate-x-4"> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b border-current py-6 xl:py-7 2xl:py-8 3xl:py-9">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-[7vw] 3xl:gap-[135px]">
+              <div class="h3 shrink-0 md:mt-3">03.</div>
+              <div :class="active === 3 ? 'h-auto opacity-100' : 'h-0 opacity-0'" class="hidden xl:block delay-100 mb-5 aspect-352/249 w-[22vw] 3xl:w-[407px] overflow-hidden rounded-theme lg:rounded-theme-lg transition-all duration-500 shrink-0">
+                <img class="object-cover size-full" width="352" height="249" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+              </div>
+
+              <div class="flex flex-col flex-1 my-3">
+                <h3>Community Energy Networks</h3>
+                <div x-show="active === 3" x-collapse x-collapse.duration.500ms class="w-full">
+                  <div class="flex flex-col gap-7 3xl:gap-8 pt-8 3xl:pt-10">
+                    <img class="object-cover size-full rounded-theme block md:hidden aspect-352/249" width="352" height="249" src="../../assets/images/home/offering/power-purchase-agreements.jpg" alt="embedded-networks">
+                   <p>Newly built multi-warehouse estate in an expanding industrial precinct with premium warehousing and ancillary offices.</p>
+                   <div class="flex flex-col lg:flex-row gap-8 xl:gap-12 2xl:gap-16 3xl:gap-20">
+                     <div class="shrink-0">
+                       <img src="../../assets/images/partners/stockland.svg" alt="logo">
+                     </div>
+                     <div class="grid grid-cols-2 gap-10 lg:gap-0 lg:grid-cols-[200px_200px] flex-1 whitespace-nowrap">
+                       <div class="flex flex-col gap-2">
+                         <p>Solution</p>
+                         <p>PV Size MWdc</p>
+                         <p>BESS Storage MWh</p>
+                       </div>
+                       <div class="flex flex-col gap-2">
+                         <p>Renewable Energy</p>
+                         <p>60</p>
+                         <p>300</p>
+                       </div>
+                     </div>
+                   </div>
+                  </div>
+               </div>
+              </div>
+
+              <div class="md:ml-auto">
+                <button type="button" @click="active = active === 3 ? null : 3" class="flex items-center cursor-pointer gap-2.5 3xl:gap-3 text-base 3xl:text-[17px] leading-none duration-300 group whitespace-nowrap h-14 3xl:h-[61px] relative z-0 text-dark-blue hover:text-dark-blue after:-z-10 after:w-14 3xl:after:w-[61px] after:rounded-full after:h-full after:left-0 after:absolute after:duration-300 after:bg-sky-blue hover:after:w-full">
+                      <div class="size-14 3xl:size-[61px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path class="fill-dark-blue stroke-sky-blue" stroke-width="0.7" d="M11.626 0.556641C11.9015 0.280742 12.3485 0.280742 12.624 0.556641L19.3408 7.2832C19.6165 7.55926 19.6162 8.00699 19.3408 8.2832L12.624 15.0107C12.3485 15.2866 11.9015 15.2866 11.626 15.0107C11.3502 14.7346 11.3502 14.2859 11.626 14.0098L16.541 9.08789L17.1377 8.49023H0.349609V7.07617H17.1377L16.541 6.47949L11.626 1.55664C11.3507 1.28045 11.3504 0.832678 11.626 0.556641Z"/>
+                        </svg>
+                      </div>
+                    <span x-text="active === 3 ? 'Read Less' : 'Read More'" class="duration-300 group-hover:-translate-x-4"> </span>
+                </button>
+              </div>
+            </div>
+          </div>
+  
+
+        </div>
+        <div class="flex flex-col md:flex-row md:justify-end w-full mt-8 3xl:mt-10">
+          
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Read More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+        </div>
+     </div>
+  </div>
+</section>
+
+<!-- Partner Section -->
+<section class="pt-0 pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-light text-dark-blue">
+  <div class="container">
+    <div class="flex flex-col gap-10 md:gap-12 lg:gap-14 2xl:gap-16 3xl:gap-18">
+      <h2>Our Project Partners</h2>
+      <div class="self-end grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 max-w-none 2xl:max-w-[74vw] 3xl:max-w-[1430px] w-full gap-4 md:gap-5 xl:gap-7">
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/esr.svg" alt="esr">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/black-rock.svg" alt="black-rock">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/charter-hall.svg" alt="charter-hall">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/cocacola.svg" alt="cocacola">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/mccan.svg" alt="mccan">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/coles.svg" alt="coles">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/csiro.svg" alt="csiro">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/lendlease.svg" alt="lendlease">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/healius.svg" alt="healius">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/elanor.svg" alt="elanor">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/icc-sydney.svg" alt="icc-sydney">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/logos.svg" alt="logos">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/stockland.svg" alt="stockland">
+        </div>
+        <div class="bg-white flex items-center justify-center rounded-theme lg:rounded-theme-lg w-full h-28 md:h-[140px] 3xl:h-[171px]">
+          <img class="scale-75 md:scale-100" src="../../assets/images/partners/gwf.svg" alt="gwf">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Insights Section -->
+<section class="pt-0 pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-light text-dark-blue">
+  <div class="container">
+     <div class="grid gap-8 lg:gap-10 2xl:gap-0 2xl:grid-cols-[auto_66vw] 3xl:grid-cols-[auto_1280px]">
+        <div class="flex justify-start">
+          <div class="heading">Our Insights</div>
+        </div>
+        <div class="flex flex-col gap-10 md:gap-12 lg:gap-14 xl:gap-16 2xl:gap-20 3xl:gap-24">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12 2xl:gap-16 3xl:gap-20">
+            <p class="lg:max-w-[703px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.</p>
+            <div>
+              
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Read More
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
+            <a href="#" class="flex flex-col gap-4">
+              <p>Embdded Network</p>
+              <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                <img class="object-cover size-full" width="407" height="289" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+              </div>
+              <h4 class="line-clamp-1">Title of Article</h4>
+              <p class="line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p class="mt-4">21 Aug 2025</p>
+            </a>
+            <a href="#" class="flex flex-col gap-4">
+              <p>Embdded Network</p>
+              <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                <img class="object-cover size-full" width="407" height="289" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+              </div>
+              <h4 class="line-clamp-1">Title of Article</h4>
+              <p class="line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p class="mt-4">21 Aug 2025</p>
+            </a>
+            <a href="#" class="flex flex-col gap-4">
+              <p>Embdded Network</p>
+              <div class="w-full aspect-407/290 rounded-theme lg:rounded-theme-lg overflow-hidden">
+                <img class="object-cover size-full" width="407" height="289" src="../../assets/images/home/offering/community-energy-networks.jpg" alt="community-energy-networks">
+              </div>
+              <h4 class="line-clamp-1">Title of Article</h4>
+              <p class="line-clamp-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p class="mt-4">21 Aug 2025</p>
+            </a>
+          </div>
+        </div>
+     </div>
+  </div>
+</section>
+ 
+
+<!-- Testimonials Section -->
+<section class="pt-0 pb-20 lg:pb-[8.3vw] 3xl:pb-[160px] bg-light text-dark-blue">
+  <div class="container">
+    <div class="flex flex-col gap-10 lg:gap-16 2xl:gap-20 3xl:gap-24">
+      <h2>What they have to say</h2>
+
+      <div class="flex flex-col gap-10 lg:gap-14 3xl:gap-16">
+
+        <div class="swiper testimonials-swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide !w-full">
+              <div class="flex flex-col gap-8 lg:gap-11 md:ml-[10vw] lg:ml-[15vw] 3xl:ml-[295px] max-w-[90vw] md:max-w-[70vw] lg:max-w-[57vw] 3xl:max-w-[1113px]">
+                <div class="testimonials">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                </div>
+                <p>Place Name Here</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide !w-full">
+              <div class="flex flex-col gap-8 lg:gap-11 md:ml-[10vw] lg:ml-[15vw] 3xl:ml-[295px] max-w-[90vw] md:max-w-[70vw] lg:max-w-[57vw] 3xl:max-w-[1113px]">
+                <div class="testimonials">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                </div>
+                <p>Place Name Here</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide !w-full">
+              <div class="flex flex-col gap-8 lg:gap-11 md:ml-[10vw] lg:ml-[15vw] 3xl:ml-[295px] max-w-[90vw] md:max-w-[70vw] lg:max-w-[57vw] 3xl:max-w-[1113px]">
+                <div class="testimonials">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                </div>
+                <p>Place Name Here</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide !w-full">
+              <div class="flex flex-col gap-8 lg:gap-11 md:ml-[10vw] lg:ml-[15vw] 3xl:ml-[295px] max-w-[90vw] md:max-w-[70vw] lg:max-w-[57vw] 3xl:max-w-[1113px]">
+                <div class="testimonials">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                </div>
+                <p>Place Name Here</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide !w-full">
+              <div class="flex flex-col gap-8 lg:gap-11 md:ml-[10vw] lg:ml-[15vw] 3xl:ml-[295px] max-w-[90vw] md:max-w-[70vw] lg:max-w-[57vw] 3xl:max-w-[1113px]">
+                <div class="testimonials">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                </div>
+                <p>Place Name Here</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="flex flex-col gap-7 3xl:gap-8">
+          <div class="relative h-px w-full bg-dark-blue/40">
+            <div id="testimonials-progress" class="h-0.5 bg-dark-blue absolute left-0 -top-px duration-300"></div>
+          </div>
+          <div class="flex items-center justify-between gap-10">
+            <div id="testimonials-counter" class="h4">01/03</div>
+            <div class="flex items-center gap-4 md:gap-6">
+              <button type="button" class="bg-sky-blue cursor-pointer size-14 3xl:size-[61px] flex items-center justify-center rounded-full js-testimonial-prev">
+                <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.59961 17.3945C9.25984 17.7349 8.70891 17.7349 8.36914 17.3945L0.605469 9.61719C0.265362 9.27648 0.265362 8.72351 0.60547 8.38281L8.36914 0.605467C8.70891 0.265104 9.25984 0.265104 9.59961 0.605468C9.93936 0.946091 9.93934 1.49823 9.59961 1.83887L3.91797 7.53027L3.32129 8.12793L22.6504 8.12793L22.6504 9.87207L3.32129 9.87207L3.91797 10.4697L9.59961 16.1611C9.93934 16.5018 9.93936 17.0539 9.59961 17.3945Z" fill="#002148" stroke="#AAD2FF" stroke-width="0.7"/>
+                </svg>
+              </button>
+
+              <button type="button" class="bg-sky-blue cursor-pointer size-14 3xl:size-[61px] flex items-center justify-center rounded-full js-testimonial-next">
+                <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.4004 0.605469C13.7402 0.265105 14.2911 0.265105 14.6309 0.605469L22.3945 8.38281C22.7346 8.72351 22.7346 9.27649 22.3945 9.61719L14.6309 17.3945C14.2911 17.7349 13.7402 17.7349 13.4004 17.3945C13.0606 17.0539 13.0607 16.5018 13.4004 16.1611L19.082 10.4697L19.6787 9.87207H0.349609V8.12793H19.6787L19.082 7.53027L13.4004 1.83887C13.0607 1.49823 13.0606 0.946093 13.4004 0.605469Z" fill="#002148" stroke="#AAD2FF" stroke-width="0.7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Schedule Call Section -->
+<section class="pt-0 pb-0 bg-light text-dark-blue">
+    <div class="absolute inset-0 size-full">
+      <img class="size-full object-cover" src="../../assets/images/common/windmill.webp" alt="bg">
+    </div>
+    <div class="container">
+      <div class="flex flex-col">
+        <div class="pt-20 pb-16 lg:py-[10.5vw] 3xl:py-[202px] flex flex-col gap-6 max-w-[729px]">
+          <h2>Schedule a call today</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.</p>
+          <div class="mt-2 flex flex-col md:flex-row md:justify-start">
+            
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-dark-blue text-sky-blue flex items-center justify-center rounded-full">
+      Contact Us
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-dark-blue text-sky-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-dark-blue fill-sky-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+          <div class="bg-white rounded-b-theme lg:rounded-b-none rounded-t-theme lg:rounded-t-theme-lg px-6 xl:px-10 2xl:px-14 pt-8 xl:pt-10 2xl:pt-12 pb-12 xl:pb-16 flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <div class="h3">FAQs</div>
+              <a href="#" class="bg-sky-blue cursor-pointer size-14 3xl:size-[61px] flex items-center justify-center rounded-full group">
+                <svg class="group-hover:rotate-45 duration-300" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.40388 1.2202C4.40346 0.739275 4.79303 0.349709 5.27395 0.350129L16.2631 0.359797C16.7445 0.360217 17.1355 0.751228 17.1359 1.23263L17.1456 12.2218C17.146 12.7027 16.7565 13.0923 16.2755 13.0919C15.7944 13.0912 15.404 12.7008 15.4034 12.2197L15.3965 4.17776L15.3958 3.33324L1.72806 17.001L0.494769 15.7677L14.1625 2.09994L13.318 2.09925L5.27603 2.09235C4.79494 2.0917 4.4045 1.7013 4.40388 1.2202Z" fill="#002148" stroke="#AAD2FF" stroke-width="0.7"/>
+                </svg>  
+              </a>
+            </div>
+            <p class="max-w-[345px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod temp.</p>
+          </div>
+
+          <div class="bg-white rounded-b-theme lg:rounded-b-none rounded-t-theme lg:rounded-t-theme-lg px-6 xl:px-10 2xl:px-14 pt-8 xl:pt-10 2xl:pt-12 pb-12 xl:pb-16 flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <div class="h3">Business Queries</div>
+              <a href="#" class="bg-sky-blue cursor-pointer size-14 3xl:size-[61px] flex items-center justify-center rounded-full group">
+                <svg class="group-hover:rotate-45 duration-300" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.40388 1.2202C4.40346 0.739275 4.79303 0.349709 5.27395 0.350129L16.2631 0.359797C16.7445 0.360217 17.1355 0.751228 17.1359 1.23263L17.1456 12.2218C17.146 12.7027 16.7565 13.0923 16.2755 13.0919C15.7944 13.0912 15.404 12.7008 15.4034 12.2197L15.3965 4.17776L15.3958 3.33324L1.72806 17.001L0.494769 15.7677L14.1625 2.09994L13.318 2.09925L5.27603 2.09235C4.79494 2.0917 4.4045 1.7013 4.40388 1.2202Z" fill="#002148" stroke="#AAD2FF" stroke-width="0.7"/>
+                </svg>  
+              </a>
+            </div>
+            <p class="max-w-[345px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod temp.</p>
+          </div>
+
+          <div class="bg-white rounded-b-theme lg:rounded-b-none rounded-t-theme lg:rounded-t-theme-lg px-6 xl:px-10 2xl:px-14 pt-8 xl:pt-10 2xl:pt-12 pb-12 xl:pb-16 flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+              <div class="h3">Report an Issue</div>
+              <a href="#" class="bg-sky-blue cursor-pointer size-14 3xl:size-[61px] flex items-center justify-center rounded-full group">
+                <svg class="group-hover:rotate-45 duration-300" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.40388 1.2202C4.40346 0.739275 4.79303 0.349709 5.27395 0.350129L16.2631 0.359797C16.7445 0.360217 17.1355 0.751228 17.1359 1.23263L17.1456 12.2218C17.146 12.7027 16.7565 13.0923 16.2755 13.0919C15.7944 13.0912 15.404 12.7008 15.4034 12.2197L15.3965 4.17776L15.3958 3.33324L1.72806 17.001L0.494769 15.7677L14.1625 2.09994L13.318 2.09925L5.27603 2.09235C4.79494 2.0917 4.4045 1.7013 4.40388 1.2202Z" fill="#002148" stroke="#AAD2FF" stroke-width="0.7"/>
+                </svg>  
+              </a>
+            </div>
+            <p class="max-w-[345px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doaoum eiusmod temp.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+        </main>
+        
+          <!-- Footer Section -->
+<footer class="bg-dark-blue text-light rounded-t-theme lg:rounded-t-theme-lg py-20 lg:py-[6.6vw] 3xl:py-32 -mt-4 relative z-20">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[112fr_88fr] gap-10 md:gap-[5.6vw] 3xl:gap-[109px]">
+      <div class="flex flex-col">
+        <a class="mb-6" href="/">
+          <img class="w-[232px] lg:w-[20.9vw] 3xl:w-[403px]" width="403" height="57" src="../../assets/images/svg/logo.svg" alt="logo">
+        </a>
+        <p class="mb-10 md:mb-14">Energy Bay acknowledges the Traditional Custodians of Country throughout Australia and their connections to land, waters and community. We pay respect to their Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander peoples.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-10 lg:gap-0 lg:mb-24">
+          <ul class="flex flex-col gap-4 font-bold">
+            <li><a href="#">Our Projects</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Insights</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="flex flex-col gap-5">
+            <div class="font-bold">About Us</div>
+            <ul class="flex flex-col gap-3 text-sky-blue">
+              <li><a href="#">Our Mission</a></li>
+              <li><a href="#">Brand Story</a></li>
+              <li><a href="#">Why Energy Bay</a></li>
+              <li><a href="#">Our Leadership</a></li>
+              <li><a href="#">Join The Team</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-5">
+            <div class="font-bold">Our Offerings</div>
+            <ul class="flex flex-col gap-3 text-sky-blue">
+              <li><a href="#">Embedded Networks</a></li>
+              <li><a href="#">Power Purchased Agreements</a></li>
+              <li><a href="#">Community Energy Networks</a></li>
+            </ul>
+            <ul class="flex gap-4">
+              <li><a target="_blank" href="#"><img src="../../assets/images/svg/instgram-logo.svg" alt="instgram"></a></li>
+              <li><a target="_blank" href="#"><img src="../../assets/images/svg/linkedin-logo.svg" alt="linkedin"></a></li>
+              <li><a target="_blank" href="#"><img src="../../assets/images/svg/facebook-logo.svg" alt="facebook"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-end gap-[4.6vw] 3xl:gap-[89px]">
+          <p>Level 16/167 Macquarie St,<br> Sydney NSW 2000</p>
+          <p>&copy; 2025 Energy Bay</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-10 md:gap-12 lg:gap-16">
+        <form class="flex flex-col">
+          <p class="mb-6 md:mb-7">Stay up to date on all Energy Bay insights by subscribing to our Newsletter.</p>
+          <input required type="email" placeholder="Enter your email address" class="mb-4 px-8 py-4 rounded-full bg-white text-dark-blue placeholder:text-dark-blue/60 focus:outline-none">
+          
+  
+    
+    
+  
+
+  <a href="#" class="flex items-center group relative z-0">
+    <span class="w-full md:w-[163px] 3xl:w-[177px] h-14 3xl:h-[61px] text-base 3xl:text-[17px] bg-sky-blue text-dark-blue flex items-center justify-center rounded-full">
+      Submit
+    </span>
+    <div class="hidden md:flex size-14 3xl:size-[61px] items-center justify-center rounded-full bg-sky-blue text-dark-blue -ml-14 3xl:ml-[-61px] relative -z-10 group-hover:ml-0 duration-300 ease-in-out">
+      <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.8594 0.486328C14.2803 0.104724 14.9696 0.10478 15.3906 0.486328L23.4932 7.83203C23.9025 8.20341 23.9025 8.79659 23.4932 9.16797L15.3906 16.5137C14.9696 16.8952 14.2803 16.8953 13.8594 16.5137C13.4497 16.1422 13.4497 15.5492 13.8594 15.1777L19.7881 9.80273L20.1719 9.4541H0.200195V7.5459H20.1719L19.7881 7.19727L13.8594 1.82227C13.4497 1.45083 13.4497 0.857767 13.8594 0.486328Z" class="stroke-sky-blue fill-dark-blue" stroke-width="0.7"/>
+      </svg>
+    </div>
+  </a>
+
+        </form>
+        <div class="flex gap-6 md:gap-10 xl:gap-12 2xl:gap-14 3xl:gap-16">
+          <div class="flex flex-col items-center text-center gap-3 text-xs md:text-[17px]">
+            <img src="../../assets/images/svg/map.svg" alt="Map Australia">
+            100% Australian<br> Owned
+          </div>
+          <div>
+            <img width="117" height="158" src="../../assets/images/common/atlas-green.jpg" alt="atlas">
+          </div>
+          <div>
+            <img width="117" height="158" src="../../assets/images/common/atlas-blue.jpg" alt="atlas">
+          </div>
+          <div>
+            <img width="117" height="158" src="../../assets/images/common/atlas-red.jpg" alt="atlas">
+          </div>
+        </div>
+        
+        
+        <ul class="flex flex-col md:flex-row items-center justify-between mt-auto gap-3 md:gap-4">
+          <li>ABN 93 001 263 734</li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="javascript:;">Back To The Top</a></li>
+        </ul>
+
+        <div class="flex flex-col md:flex-row lg:hidden items-center md:items-end gap-3 md:gap-10 justify-between text-center md:text-start">
+          <p>Level 16/167 Macquarie St,<br> Sydney NSW 2000</p>
+          <p>&copy; 2025 Energy Bay</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+        
+      </div>
+    </div>
+
+    <!--  GSAP -->  
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <!-- Alpine Plugins -->
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Main JS -->
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+  </body>
+</html>
